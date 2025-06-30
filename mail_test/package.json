@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "mail_test",
+  "version": "1.0.0",
+  "main": "MailTest.js",
+  "scripts": {
+    "dev": "node MailTest.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.0.0",
+    "nodemailer": "^7.0.4"
+  }
+}
