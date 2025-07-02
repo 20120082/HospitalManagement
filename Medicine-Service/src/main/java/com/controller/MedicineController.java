@@ -29,12 +29,12 @@ public class MedicineController {
         return medicineService.getAllMedicines();
     }
 
-    // API tìm kiếm thuốc theo tên, mã hoặc manufacturer
+    // API tìm kiếm thuốc theo tên, mã hoặc loại thuốc (category)
     @GetMapping("/search")
     public ResponseEntity<List<Medicine>> searchMedicines(@RequestParam(required = false) String name,
                                                          @RequestParam(required = false) String code,
-                                                         @RequestParam(required = false) String manufacturer) {
-        List<Medicine> result = medicineService.searchMedicines(name, code, manufacturer);
+                                                         @RequestParam(required = false) String category) {
+        List<Medicine> result = medicineService.searchMedicines(name, code, category);
         if (result == null || result.isEmpty()) {
             return ResponseEntity.noContent().build();
         }

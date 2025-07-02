@@ -37,7 +37,9 @@ public class MedicineServiceImpl implements MedicineService {
         if (existingOpt.isPresent()) {
             Medicine existing = existingOpt.get();
             // Cập nhật các trường cần thiết
+            existing.setCode(medicine.getCode());
             existing.setName(medicine.getName());
+            existing.setCategory(medicine.getCategory());
             existing.setDescription(medicine.getDescription());
             existing.setUnit(medicine.getUnit());
             existing.setPrice(medicine.getPrice());
@@ -57,25 +59,25 @@ public class MedicineServiceImpl implements MedicineService {
     }
     // Tìm kiếm thuốc theo tên, mã hoặc manufacturer (chứa, không phân biệt hoa thường)
     @Override
-    public List<Medicine> searchMedicines(String name, String code, String manufacturer) {
+    public List<Medicine> searchMedicines(String name, String code, String category) {
         boolean hasName = name != null && !name.isBlank();
         boolean hasCode = code != null && !code.isBlank();
-        boolean hasManufacturer = manufacturer != null && !manufacturer.isBlank();
-        if (!hasName && !hasCode && !hasManufacturer) {
+        boolean hasCategory = category != null && !category.isBlank();
+        if (!hasName && !hasCode && !hasCategory) {
             return medicineRepository.findAll();
         }
-        if (hasName && !hasCode && !hasManufacturer) {
+        if (hasName && !hasCode && !hasCategory) {
             return medicineRepository.findByNameContainingIgnoreCase(name);
         }
-        if (!hasName && hasCode && !hasManufacturer) {
+        if (!hasName && hasCode && !hasCategory) {
             return medicineRepository.findByCodeContainingIgnoreCase(code);
         }
-        if (!hasName && !hasCode && hasManufacturer) {
-            return medicineRepository.findByManufacturerContainingIgnoreCase(manufacturer);
+        if (!hasName && !hasCode && hasCategory) {
+            return medicineRepository.findByCategoryContainingIgnoreCase(category);
         }
         // Kết hợp các trường
-        return medicineRepository.findByNameContainingIgnoreCaseOrCodeContainingIgnoreCaseOrManufacturerContainingIgnoreCase(
-            hasName ? name : "", hasCode ? code : "", hasManufacturer ? manufacturer : ""
+        return medicineRepository.findByNameContainingIgnoreCaseOrCodeContainingIgnoreCaseOrCategoryContainingIgnoreCase(
+            hasName ? name : "", hasCode ? code : "", hasCategory ? category : ""
         );
     }
 }

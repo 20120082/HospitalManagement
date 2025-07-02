@@ -11,6 +11,6 @@ public interface MedicineService {
     Medicine updateMedicine(int id, Medicine medicine);
     void deleteMedicine(int id);
 
-    // Tìm kiếm thuốc theo tên, mã hoặc manufacturer
-    List<Medicine> searchMedicines(String name, String code, String manufacturer);
+    // Tìm kiếm thuốc theo tên, mã hoặc loại thuốc (category)
+    List<Medicine> searchMedicines(String name, String code, String category);
 }
