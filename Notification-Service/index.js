@@ -22,9 +22,10 @@ mongoose.connect(mongoUri, {
 const client = new Eureka({
   instance: {
     app: 'notification-service',
+    instanceId: 'localhost:notification-service:8085',
     hostName: 'localhost',
     ipAddr: '127.0.0.1',
-    port: { '$': 8088, '@enabled': true },
+    port: { '$': 8085, '@enabled': true },
     vipAddress: 'notification-service',
     dataCenterInfo: { '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo', name: 'MyOwn' }
   },
@@ -40,6 +41,6 @@ app.use('/api/notify', notificationRoutes);
 
 client.start();
 
-app.listen(8088, () => console.log('Notification service running on port 8088'));
+app.listen(8085, () => console.log('Notification service running on port 8085'));
 
 
