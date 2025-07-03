@@ -1,0 +1,26 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.detail-row {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.table {
+    background-color: #fff;
+}
+
+.card {
+    background-color: #fff;
+}
+
+.total-amount {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
