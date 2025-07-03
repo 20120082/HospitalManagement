@@ -3,6 +3,7 @@ package com.hospital.prescription.controller;
 import com.hospital.prescription.dto.PrescriptionDTO;
 import com.hospital.prescription.service.PrescriptionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,9 +16,13 @@ public class PrescriptionController {
     private PrescriptionService prescriptionService;
 
     @PostMapping
-    public ResponseEntity<PrescriptionDTO> createPrescription(@RequestBody PrescriptionDTO dto) {
-        PrescriptionDTO created = prescriptionService.createPrescription(dto);
-        return ResponseEntity.ok(created);
+    public ResponseEntity<?> createPrescription(@RequestBody PrescriptionDTO dto) {
+        try {
+            PrescriptionDTO created = prescriptionService.createPrescription(dto);
+            return ResponseEntity.ok(created);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<String>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
     }
 
     @GetMapping("/{id}")
@@ -45,11 +50,15 @@ public class PrescriptionController {
     }
     
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePrescription(@PathVariable Integer id) {
-        boolean deleted = prescriptionService.deletePrescription(id);
-        if (!deleted) {
-            return ResponseEntity.notFound().build();
+    public ResponseEntity<?> deletePrescription(@PathVariable Integer id) {
+        try {
+            boolean deleted = prescriptionService.deletePrescription(id);
+            if (!deleted) {
+                return ResponseEntity.notFound().build();
+            }
+            return ResponseEntity.noContent().build();
+        } catch (RuntimeException e) {
+            return new ResponseEntity<String>(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
-        return ResponseEntity.noContent().build();
     }
 }

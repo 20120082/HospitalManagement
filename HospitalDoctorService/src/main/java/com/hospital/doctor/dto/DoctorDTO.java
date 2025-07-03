@@ -8,7 +8,6 @@ public class DoctorDTO {
     private String position;
     private String username;
 
-    // Getters and Setters
     public Integer getId() {
         return id;
     }
