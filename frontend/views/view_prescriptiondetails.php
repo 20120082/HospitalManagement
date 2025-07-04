@@ -60,14 +60,24 @@
             </table>
             <p class="fw-bold total-amount">Tổng số tiền: <?php echo htmlspecialchars(number_format($totalAmount, 2)); ?> VND</p>
         <?php endif; ?>
+        <?php 
+            // Tìm thông tin bệnh nhân từ array patients
+            $currentPatient = null;
+            foreach ($patients as $patient) {
+                if ($patient['patientId'] == $prescription['idPatient']) {
+                    $currentPatient = $patient;
+                    break;
+                }
+            }
+        ?>
         <form id="sendNotifyForm" method="POST" action="controllers/PrescriptionNotificationController.php" class="mb-3">
             <div class="mb-2">
                 <label>Email bệnh nhân:</label>
-                <input type="email" name="to" class="form-control" required value="<?php echo htmlspecialchars($patient['email'] ?? ''); ?>">
+                <input type="email" name="to" class="form-control" required value="<?php echo htmlspecialchars($currentPatient['email'] ?? ''); ?>">
             </div>
             <div class="mb-2">
                 <label>Tên bệnh nhân:</label>
-                <input type="text" name="patientName" class="form-control" required value="<?php echo htmlspecialchars($patient['name'] ?? ''); ?>">
+                <input type="text" name="patientName" class="form-control" required value="<?php echo htmlspecialchars($currentPatient['fullName'] ?? ''); ?>">
             </div>
             <div class="mb-2">
                 <label>Chi tiết đơn thuốc:</label>
