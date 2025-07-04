@@ -117,6 +117,7 @@ class PrescriptionController {
                         }
                     }
                 }
+                $patients= $this->model->getAllPatients();
                 require_once 'views/view_prescriptiondetails.php';
             } else {
                 $result = ['success' => false, 'message' => 'Prescription not found'];

@@ -13,7 +13,12 @@
         <div class="card mb-3">
             <div class="card-body">
                 <h5 class="card-title">Prescription ID: <?php echo htmlspecialchars($prescription['id']); ?></h5>
-                <p class="card-text"><strong>Patient ID:</strong> <?php echo htmlspecialchars($prescription['idPatient']); ?></p>
+                <p class="card-text"><strong>Patient-Patient ID:</strong> <?php foreach ($patients as $patient): ?>
+                                <?php if ($patient['patientId'] == $prescription['idPatient']): ?>
+                                <?php echo htmlspecialchars($patient['fullName']); ?> - <?php echo $prescription['idPatient']; ?>
+                                <?php break; ?>
+                                <?php endif; ?>
+                            <?php endforeach; ?></p>
                 <p class="card-text"><strong>Created Date:</strong> <?php echo htmlspecialchars($prescription['createdDate']); ?></p>
                 <p class="card-text"><strong>Status:</strong> <?php echo htmlspecialchars($prescription['status']); ?></p>
             </div>
