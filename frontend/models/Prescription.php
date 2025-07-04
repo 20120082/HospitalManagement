@@ -2,11 +2,29 @@
 class Prescription {
     private $apiBaseUrl = 'http://localhost:8083/api/prescriptions';
     private $medicineApiBaseUrl = 'http://localhost:8084/api/medicines';
+    private $patientApiBaseUrl = 'http://localhost:8090/api/patients';
 
     public function getAllMedicines() {
         $curl = curl_init();
         curl_setopt_array($curl, [
             CURLOPT_URL => $this->medicineApiBaseUrl,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => ['Content-Type: application/json; charset=UTF-8'],
+        ]);
+        $response = curl_exec($curl);
+        $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        curl_close($curl);
+
+        if ($httpCode === 200) {
+            return json_decode($response, true);
+        }
+        return [];
+    }
+
+    public function getAllPatients() {
+        $curl = curl_init();
+        curl_setopt_array($curl, [
+            CURLOPT_URL => $this->patientApiBaseUrl,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_HTTPHEADER => ['Content-Type: application/json; charset=UTF-8'],
         ]);

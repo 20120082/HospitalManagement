@@ -14,7 +14,7 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Patient ID</th>
+                    <th>Patient-Patient ID</th>
                     <th>Created Date</th>
                     <th>Status</th>
                     <th>Details</th>
@@ -29,7 +29,12 @@
                     <?php foreach ($prescriptions as $prescription): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($prescription['id']); ?></td>
-                            <td><?php echo htmlspecialchars($prescription['idPatient']); ?></td>
+                            <td><?php foreach ($patients as $patient): ?>
+                                <?php if ($patient['patientId'] == $prescription['idPatient']): ?>
+                                <?php echo htmlspecialchars($patient['fullName']); ?> - <?php echo $prescription['idPatient']; ?>
+                                <?php break; ?>
+                                <?php endif; ?>
+                            <?php endforeach; ?></td>
                             <td><?php echo htmlspecialchars($prescription['createdDate']); ?></td>
                             <td><?php echo htmlspecialchars($prescription['status']); ?></td>
                             <td>
