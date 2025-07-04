@@ -12,7 +12,7 @@ public class Prescription {
     private Integer id;
 
     @Column(name = "Id_Patient", nullable = false)
-    private Integer idPatient;
+    private String idPatient;
 
     @Column(name = "Created_Date", nullable = false)
     private LocalDate createdDate;
@@ -31,11 +31,11 @@ public class Prescription {
         this.id = id;
     }
 
-    public Integer getIdPatient() {
+    public String getIdPatient() {
         return idPatient;
     }
 
-    public void setIdPatient(Integer idPatient) {
+    public void setIdPatient(String idPatient) {
         this.idPatient = idPatient;
     }
 

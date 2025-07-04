@@ -6,7 +6,7 @@ import java.util.List;
 
 public class PrescriptionDTO {
     private Integer id;
-    private Integer idPatient;
+    private String idPatient;
     private LocalDate createdDate;
     private String status;
     
@@ -20,11 +20,11 @@ public class PrescriptionDTO {
         this.id = id;
     }
 
-    public Integer getIdPatient() {
+    public String getIdPatient() {
         return idPatient;
     }
 
-    public void setIdPatient(Integer idPatient) {
+    public void setIdPatient(String idPatient) {
         this.idPatient = idPatient;
     }
 
