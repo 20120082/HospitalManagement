@@ -1,0 +1,1901 @@
+[
+  {
+    "recordId": "MR0001",
+    "patientId": "BN001",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK097",
+    "createdAt": "2025-06-06"
+  },
+  {
+    "recordId": "MR0002",
+    "patientId": "BN001",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK086",
+    "createdAt": "2025-06-16"
+  },
+  {
+    "recordId": "MR0003",
+    "patientId": "BN002",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK077",
+    "createdAt": "2025-06-27"
+  },
+  {
+    "recordId": "MR0004",
+    "patientId": "BN003",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK097",
+    "createdAt": "2025-06-11"
+  },
+  {
+    "recordId": "MR0005",
+    "patientId": "BN003",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK079",
+    "createdAt": "2025-06-10"
+  },
+  {
+    "recordId": "MR0006",
+    "patientId": "BN003",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK079",
+    "createdAt": "2025-06-17"
+  },
+  {
+    "recordId": "MR0007",
+    "patientId": "BN004",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK052",
+    "createdAt": "2025-06-18"
+  },
+  {
+    "recordId": "MR0008",
+    "patientId": "BN004",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK098",
+    "createdAt": "2025-06-05"
+  },
+  {
+    "recordId": "MR0009",
+    "patientId": "BN004",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK093",
+    "createdAt": "2025-06-30"
+  },
+  {
+    "recordId": "MR0010",
+    "patientId": "BN005",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK085",
+    "createdAt": "2025-06-09"
+  },
+  {
+    "recordId": "MR0011",
+    "patientId": "BN006",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK049",
+    "createdAt": "2025-06-08"
+  },
+  {
+    "recordId": "MR0012",
+    "patientId": "BN006",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK048",
+    "createdAt": "2025-06-28"
+  },
+  {
+    "recordId": "MR0013",
+    "patientId": "BN006",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK006",
+    "createdAt": "2025-06-12"
+  },
+  {
+    "recordId": "MR0014",
+    "patientId": "BN007",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK045",
+    "createdAt": "2025-06-06"
+  },
+  {
+    "recordId": "MR0015",
+    "patientId": "BN007",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK094",
+    "createdAt": "2025-06-16"
+  },
+  {
+    "recordId": "MR0016",
+    "patientId": "BN007",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK092",
+    "createdAt": "2025-06-26"
+  },
+  {
+    "recordId": "MR0017",
+    "patientId": "BN008",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK094",
+    "createdAt": "2025-06-21"
+  },
+  {
+    "recordId": "MR0018",
+    "patientId": "BN009",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK061",
+    "createdAt": "2025-06-07"
+  },
+  {
+    "recordId": "MR0019",
+    "patientId": "BN009",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK078",
+    "createdAt": "2025-06-24"
+  },
+  {
+    "recordId": "MR0020",
+    "patientId": "BN009",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK039",
+    "createdAt": "2025-06-04"
+  },
+  {
+    "recordId": "MR0021",
+    "patientId": "BN010",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK040",
+    "createdAt": "2025-07-03"
+  },
+  {
+    "recordId": "MR0022",
+    "patientId": "BN010",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK069",
+    "createdAt": "2025-06-09"
+  },
+  {
+    "recordId": "MR0023",
+    "patientId": "BN010",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK050",
+    "createdAt": "2025-06-16"
+  },
+  {
+    "recordId": "MR0024",
+    "patientId": "BN011",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK092",
+    "createdAt": "2025-06-08"
+  },
+  {
+    "recordId": "MR0025",
+    "patientId": "BN011",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK045",
+    "createdAt": "2025-06-25"
+  },
+  {
+    "recordId": "MR0026",
+    "patientId": "BN012",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK036",
+    "createdAt": "2025-06-11"
+  },
+  {
+    "recordId": "MR0027",
+    "patientId": "BN012",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK010",
+    "createdAt": "2025-06-21"
+  },
+  {
+    "recordId": "MR0028",
+    "patientId": "BN012",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK099",
+    "createdAt": "2025-06-24"
+  },
+  {
+    "recordId": "MR0029",
+    "patientId": "BN013",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK069",
+    "createdAt": "2025-06-13"
+  },
+  {
+    "recordId": "MR0030",
+    "patientId": "BN013",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK043",
+    "createdAt": "2025-06-27"
+  },
+  {
+    "recordId": "MR0031",
+    "patientId": "BN014",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK054",
+    "createdAt": "2025-06-05"
+  },
+  {
+    "recordId": "MR0032",
+    "patientId": "BN015",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK038",
+    "createdAt": "2025-06-24"
+  },
+  {
+    "recordId": "MR0033",
+    "patientId": "BN015",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK020",
+    "createdAt": "2025-06-07"
+  },
+  {
+    "recordId": "MR0034",
+    "patientId": "BN016",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK008",
+    "createdAt": "2025-06-13"
+  },
+  {
+    "recordId": "MR0035",
+    "patientId": "BN016",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK032",
+    "createdAt": "2025-06-05"
+  },
+  {
+    "recordId": "MR0036",
+    "patientId": "BN016",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK063",
+    "createdAt": "2025-06-25"
+  },
+  {
+    "recordId": "MR0037",
+    "patientId": "BN017",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK098",
+    "createdAt": "2025-06-17"
+  },
+  {
+    "recordId": "MR0038",
+    "patientId": "BN017",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK087",
+    "createdAt": "2025-06-20"
+  },
+  {
+    "recordId": "MR0039",
+    "patientId": "BN018",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK079",
+    "createdAt": "2025-06-09"
+  },
+  {
+    "recordId": "MR0040",
+    "patientId": "BN019",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK099",
+    "createdAt": "2025-07-03"
+  },
+  {
+    "recordId": "MR0041",
+    "patientId": "BN019",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK020",
+    "createdAt": "2025-06-16"
+  },
+  {
+    "recordId": "MR0042",
+    "patientId": "BN019",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK074",
+    "createdAt": "2025-06-08"
+  },
+  {
+    "recordId": "MR0043",
+    "patientId": "BN020",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK030",
+    "createdAt": "2025-07-03"
+  },
+  {
+    "recordId": "MR0044",
+    "patientId": "BN020",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK031",
+    "createdAt": "2025-06-24"
+  },
+  {
+    "recordId": "MR0045",
+    "patientId": "BN020",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK095",
+    "createdAt": "2025-06-22"
+  },
+  {
+    "recordId": "MR0046",
+    "patientId": "BN021",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK039",
+    "createdAt": "2025-06-06"
+  },
+  {
+    "recordId": "MR0047",
+    "patientId": "BN021",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK083",
+    "createdAt": "2025-06-26"
+  },
+  {
+    "recordId": "MR0048",
+    "patientId": "BN022",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK056",
+    "createdAt": "2025-06-25"
+  },
+  {
+    "recordId": "MR0049",
+    "patientId": "BN022",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK033",
+    "createdAt": "2025-06-17"
+  },
+  {
+    "recordId": "MR0050",
+    "patientId": "BN022",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK040",
+    "createdAt": "2025-06-30"
+  },
+  {
+    "recordId": "MR0051",
+    "patientId": "BN023",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK093",
+    "createdAt": "2025-06-29"
+  },
+  {
+    "recordId": "MR0052",
+    "patientId": "BN023",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK047",
+    "createdAt": "2025-06-27"
+  },
+  {
+    "recordId": "MR0053",
+    "patientId": "BN023",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK006",
+    "createdAt": "2025-06-05"
+  },
+  {
+    "recordId": "MR0054",
+    "patientId": "BN024",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK028",
+    "createdAt": "2025-06-08"
+  },
+  {
+    "recordId": "MR0055",
+    "patientId": "BN024",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK038",
+    "createdAt": "2025-06-06"
+  },
+  {
+    "recordId": "MR0056",
+    "patientId": "BN025",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK094",
+    "createdAt": "2025-06-15"
+  },
+  {
+    "recordId": "MR0057",
+    "patientId": "BN025",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK001",
+    "createdAt": "2025-06-07"
+  },
+  {
+    "recordId": "MR0058",
+    "patientId": "BN026",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK038",
+    "createdAt": "2025-06-26"
+  },
+  {
+    "recordId": "MR0059",
+    "patientId": "BN026",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK098",
+    "createdAt": "2025-06-23"
+  },
+  {
+    "recordId": "MR0060",
+    "patientId": "BN026",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK013",
+    "createdAt": "2025-07-02"
+  },
+  {
+    "recordId": "MR0061",
+    "patientId": "BN027",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK042",
+    "createdAt": "2025-06-23"
+  },
+  {
+    "recordId": "MR0062",
+    "patientId": "BN027",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK071",
+    "createdAt": "2025-06-29"
+  },
+  {
+    "recordId": "MR0063",
+    "patientId": "BN027",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK093",
+    "createdAt": "2025-06-17"
+  },
+  {
+    "recordId": "MR0064",
+    "patientId": "BN028",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK053",
+    "createdAt": "2025-06-15"
+  },
+  {
+    "recordId": "MR0065",
+    "patientId": "BN029",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK013",
+    "createdAt": "2025-07-02"
+  },
+  {
+    "recordId": "MR0066",
+    "patientId": "BN030",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK037",
+    "createdAt": "2025-06-05"
+  },
+  {
+    "recordId": "MR0067",
+    "patientId": "BN030",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK068",
+    "createdAt": "2025-06-12"
+  },
+  {
+    "recordId": "MR0068",
+    "patientId": "BN031",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK079",
+    "createdAt": "2025-06-12"
+  },
+  {
+    "recordId": "MR0069",
+    "patientId": "BN032",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK026",
+    "createdAt": "2025-06-15"
+  },
+  {
+    "recordId": "MR0070",
+    "patientId": "BN032",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK069",
+    "createdAt": "2025-06-17"
+  },
+  {
+    "recordId": "MR0071",
+    "patientId": "BN032",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK007",
+    "createdAt": "2025-06-15"
+  },
+  {
+    "recordId": "MR0072",
+    "patientId": "BN033",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK002",
+    "createdAt": "2025-06-27"
+  },
+  {
+    "recordId": "MR0073",
+    "patientId": "BN033",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK016",
+    "createdAt": "2025-06-16"
+  },
+  {
+    "recordId": "MR0074",
+    "patientId": "BN034",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK067",
+    "createdAt": "2025-06-06"
+  },
+  {
+    "recordId": "MR0075",
+    "patientId": "BN034",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK089",
+    "createdAt": "2025-06-24"
+  },
+  {
+    "recordId": "MR0076",
+    "patientId": "BN034",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK063",
+    "createdAt": "2025-06-19"
+  },
+  {
+    "recordId": "MR0077",
+    "patientId": "BN035",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK001",
+    "createdAt": "2025-06-21"
+  },
+  {
+    "recordId": "MR0078",
+    "patientId": "BN036",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK027",
+    "createdAt": "2025-06-09"
+  },
+  {
+    "recordId": "MR0079",
+    "patientId": "BN037",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK035",
+    "createdAt": "2025-06-19"
+  },
+  {
+    "recordId": "MR0080",
+    "patientId": "BN037",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK025",
+    "createdAt": "2025-06-28"
+  },
+  {
+    "recordId": "MR0081",
+    "patientId": "BN037",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK032",
+    "createdAt": "2025-06-14"
+  },
+  {
+    "recordId": "MR0082",
+    "patientId": "BN038",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK054",
+    "createdAt": "2025-06-07"
+  },
+  {
+    "recordId": "MR0083",
+    "patientId": "BN039",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK031",
+    "createdAt": "2025-06-05"
+  },
+  {
+    "recordId": "MR0084",
+    "patientId": "BN039",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK093",
+    "createdAt": "2025-06-26"
+  },
+  {
+    "recordId": "MR0085",
+    "patientId": "BN039",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK007",
+    "createdAt": "2025-06-25"
+  },
+  {
+    "recordId": "MR0086",
+    "patientId": "BN040",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK086",
+    "createdAt": "2025-06-26"
+  },
+  {
+    "recordId": "MR0087",
+    "patientId": "BN041",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK038",
+    "createdAt": "2025-06-16"
+  },
+  {
+    "recordId": "MR0088",
+    "patientId": "BN041",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK033",
+    "createdAt": "2025-06-21"
+  },
+  {
+    "recordId": "MR0089",
+    "patientId": "BN041",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK032",
+    "createdAt": "2025-06-09"
+  },
+  {
+    "recordId": "MR0090",
+    "patientId": "BN042",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK035",
+    "createdAt": "2025-07-02"
+  },
+  {
+    "recordId": "MR0091",
+    "patientId": "BN042",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK050",
+    "createdAt": "2025-06-12"
+  },
+  {
+    "recordId": "MR0092",
+    "patientId": "BN043",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK049",
+    "createdAt": "2025-06-26"
+  },
+  {
+    "recordId": "MR0093",
+    "patientId": "BN043",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK037",
+    "createdAt": "2025-07-01"
+  },
+  {
+    "recordId": "MR0094",
+    "patientId": "BN043",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK022",
+    "createdAt": "2025-06-06"
+  },
+  {
+    "recordId": "MR0095",
+    "patientId": "BN044",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK098",
+    "createdAt": "2025-06-12"
+  },
+  {
+    "recordId": "MR0096",
+    "patientId": "BN044",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK060",
+    "createdAt": "2025-06-06"
+  },
+  {
+    "recordId": "MR0097",
+    "patientId": "BN045",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK077",
+    "createdAt": "2025-06-07"
+  },
+  {
+    "recordId": "MR0098",
+    "patientId": "BN045",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK006",
+    "createdAt": "2025-06-14"
+  },
+  {
+    "recordId": "MR0099",
+    "patientId": "BN046",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK017",
+    "createdAt": "2025-06-18"
+  },
+  {
+    "recordId": "MR0100",
+    "patientId": "BN046",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK023",
+    "createdAt": "2025-06-09"
+  },
+  {
+    "recordId": "MR0101",
+    "patientId": "BN047",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK068",
+    "createdAt": "2025-06-11"
+  },
+  {
+    "recordId": "MR0102",
+    "patientId": "BN047",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK003",
+    "createdAt": "2025-06-11"
+  },
+  {
+    "recordId": "MR0103",
+    "patientId": "BN048",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK040",
+    "createdAt": "2025-06-24"
+  },
+  {
+    "recordId": "MR0104",
+    "patientId": "BN049",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK041",
+    "createdAt": "2025-06-12"
+  },
+  {
+    "recordId": "MR0105",
+    "patientId": "BN049",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK056",
+    "createdAt": "2025-06-30"
+  },
+  {
+    "recordId": "MR0106",
+    "patientId": "BN049",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK093",
+    "createdAt": "2025-06-10"
+  },
+  {
+    "recordId": "MR0107",
+    "patientId": "BN050",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK010",
+    "createdAt": "2025-06-24"
+  },
+  {
+    "recordId": "MR0108",
+    "patientId": "BN050",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK059",
+    "createdAt": "2025-06-21"
+  },
+  {
+    "recordId": "MR0109",
+    "patientId": "BN051",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK031",
+    "createdAt": "2025-06-27"
+  },
+  {
+    "recordId": "MR0110",
+    "patientId": "BN051",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK098",
+    "createdAt": "2025-06-30"
+  },
+  {
+    "recordId": "MR0111",
+    "patientId": "BN052",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK065",
+    "createdAt": "2025-06-08"
+  },
+  {
+    "recordId": "MR0112",
+    "patientId": "BN052",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK057",
+    "createdAt": "2025-06-15"
+  },
+  {
+    "recordId": "MR0113",
+    "patientId": "BN053",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK083",
+    "createdAt": "2025-06-24"
+  },
+  {
+    "recordId": "MR0114",
+    "patientId": "BN053",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK036",
+    "createdAt": "2025-06-10"
+  },
+  {
+    "recordId": "MR0115",
+    "patientId": "BN054",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK061",
+    "createdAt": "2025-06-29"
+  },
+  {
+    "recordId": "MR0116",
+    "patientId": "BN054",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK037",
+    "createdAt": "2025-06-07"
+  },
+  {
+    "recordId": "MR0117",
+    "patientId": "BN055",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK041",
+    "createdAt": "2025-06-16"
+  },
+  {
+    "recordId": "MR0118",
+    "patientId": "BN056",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK071",
+    "createdAt": "2025-06-10"
+  },
+  {
+    "recordId": "MR0119",
+    "patientId": "BN056",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK006",
+    "createdAt": "2025-07-01"
+  },
+  {
+    "recordId": "MR0120",
+    "patientId": "BN056",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK031",
+    "createdAt": "2025-06-23"
+  },
+  {
+    "recordId": "MR0121",
+    "patientId": "BN057",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK024",
+    "createdAt": "2025-06-22"
+  },
+  {
+    "recordId": "MR0122",
+    "patientId": "BN058",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK074",
+    "createdAt": "2025-06-15"
+  },
+  {
+    "recordId": "MR0123",
+    "patientId": "BN058",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK072",
+    "createdAt": "2025-06-09"
+  },
+  {
+    "recordId": "MR0124",
+    "patientId": "BN059",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK080",
+    "createdAt": "2025-07-02"
+  },
+  {
+    "recordId": "MR0125",
+    "patientId": "BN060",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK091",
+    "createdAt": "2025-06-23"
+  },
+  {
+    "recordId": "MR0126",
+    "patientId": "BN060",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK063",
+    "createdAt": "2025-06-16"
+  },
+  {
+    "recordId": "MR0127",
+    "patientId": "BN060",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK037",
+    "createdAt": "2025-06-20"
+  },
+  {
+    "recordId": "MR0128",
+    "patientId": "BN061",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK019",
+    "createdAt": "2025-06-30"
+  },
+  {
+    "recordId": "MR0129",
+    "patientId": "BN062",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK025",
+    "createdAt": "2025-07-02"
+  },
+  {
+    "recordId": "MR0130",
+    "patientId": "BN063",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK017",
+    "createdAt": "2025-07-01"
+  },
+  {
+    "recordId": "MR0131",
+    "patientId": "BN063",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK033",
+    "createdAt": "2025-06-20"
+  },
+  {
+    "recordId": "MR0132",
+    "patientId": "BN064",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK071",
+    "createdAt": "2025-06-19"
+  },
+  {
+    "recordId": "MR0133",
+    "patientId": "BN065",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK096",
+    "createdAt": "2025-07-02"
+  },
+  {
+    "recordId": "MR0134",
+    "patientId": "BN065",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK087",
+    "createdAt": "2025-06-28"
+  },
+  {
+    "recordId": "MR0135",
+    "patientId": "BN066",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK051",
+    "createdAt": "2025-06-08"
+  },
+  {
+    "recordId": "MR0136",
+    "patientId": "BN067",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK094",
+    "createdAt": "2025-06-11"
+  },
+  {
+    "recordId": "MR0137",
+    "patientId": "BN067",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK004",
+    "createdAt": "2025-06-26"
+  },
+  {
+    "recordId": "MR0138",
+    "patientId": "BN068",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK095",
+    "createdAt": "2025-06-10"
+  },
+  {
+    "recordId": "MR0139",
+    "patientId": "BN069",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK039",
+    "createdAt": "2025-06-04"
+  },
+  {
+    "recordId": "MR0140",
+    "patientId": "BN069",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK011",
+    "createdAt": "2025-06-07"
+  },
+  {
+    "recordId": "MR0141",
+    "patientId": "BN069",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK038",
+    "createdAt": "2025-07-01"
+  },
+  {
+    "recordId": "MR0142",
+    "patientId": "BN070",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK081",
+    "createdAt": "2025-06-17"
+  },
+  {
+    "recordId": "MR0143",
+    "patientId": "BN071",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK059",
+    "createdAt": "2025-07-03"
+  },
+  {
+    "recordId": "MR0144",
+    "patientId": "BN071",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK054",
+    "createdAt": "2025-06-05"
+  },
+  {
+    "recordId": "MR0145",
+    "patientId": "BN071",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK033",
+    "createdAt": "2025-06-16"
+  },
+  {
+    "recordId": "MR0146",
+    "patientId": "BN072",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK038",
+    "createdAt": "2025-06-04"
+  },
+  {
+    "recordId": "MR0147",
+    "patientId": "BN072",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK037",
+    "createdAt": "2025-06-30"
+  },
+  {
+    "recordId": "MR0148",
+    "patientId": "BN072",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK079",
+    "createdAt": "2025-06-25"
+  },
+  {
+    "recordId": "MR0149",
+    "patientId": "BN073",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK094",
+    "createdAt": "2025-06-18"
+  },
+  {
+    "recordId": "MR0150",
+    "patientId": "BN073",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK032",
+    "createdAt": "2025-06-21"
+  },
+  {
+    "recordId": "MR0151",
+    "patientId": "BN074",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK008",
+    "createdAt": "2025-06-29"
+  },
+  {
+    "recordId": "MR0152",
+    "patientId": "BN074",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK077",
+    "createdAt": "2025-06-10"
+  },
+  {
+    "recordId": "MR0153",
+    "patientId": "BN074",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK017",
+    "createdAt": "2025-06-04"
+  },
+  {
+    "recordId": "MR0154",
+    "patientId": "BN075",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK047",
+    "createdAt": "2025-06-22"
+  },
+  {
+    "recordId": "MR0155",
+    "patientId": "BN075",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK011",
+    "createdAt": "2025-06-19"
+  },
+  {
+    "recordId": "MR0156",
+    "patientId": "BN076",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK051",
+    "createdAt": "2025-06-25"
+  },
+  {
+    "recordId": "MR0157",
+    "patientId": "BN077",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK006",
+    "createdAt": "2025-06-27"
+  },
+  {
+    "recordId": "MR0158",
+    "patientId": "BN078",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK039",
+    "createdAt": "2025-07-01"
+  },
+  {
+    "recordId": "MR0159",
+    "patientId": "BN078",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK017",
+    "createdAt": "2025-07-01"
+  },
+  {
+    "recordId": "MR0160",
+    "patientId": "BN078",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK096",
+    "createdAt": "2025-06-29"
+  },
+  {
+    "recordId": "MR0161",
+    "patientId": "BN079",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK097",
+    "createdAt": "2025-07-03"
+  },
+  {
+    "recordId": "MR0162",
+    "patientId": "BN079",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK044",
+    "createdAt": "2025-06-16"
+  },
+  {
+    "recordId": "MR0163",
+    "patientId": "BN079",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK073",
+    "createdAt": "2025-06-20"
+  },
+  {
+    "recordId": "MR0164",
+    "patientId": "BN080",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK008",
+    "createdAt": "2025-06-23"
+  },
+  {
+    "recordId": "MR0165",
+    "patientId": "BN080",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK032",
+    "createdAt": "2025-06-21"
+  },
+  {
+    "recordId": "MR0166",
+    "patientId": "BN080",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK006",
+    "createdAt": "2025-06-25"
+  },
+  {
+    "recordId": "MR0167",
+    "patientId": "BN081",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK081",
+    "createdAt": "2025-06-12"
+  },
+  {
+    "recordId": "MR0168",
+    "patientId": "BN081",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK094",
+    "createdAt": "2025-06-06"
+  },
+  {
+    "recordId": "MR0169",
+    "patientId": "BN081",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK094",
+    "createdAt": "2025-06-19"
+  },
+  {
+    "recordId": "MR0170",
+    "patientId": "BN082",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK041",
+    "createdAt": "2025-06-16"
+  },
+  {
+    "recordId": "MR0171",
+    "patientId": "BN082",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK037",
+    "createdAt": "2025-06-12"
+  },
+  {
+    "recordId": "MR0172",
+    "patientId": "BN082",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK009",
+    "createdAt": "2025-06-11"
+  },
+  {
+    "recordId": "MR0173",
+    "patientId": "BN083",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK003",
+    "createdAt": "2025-06-16"
+  },
+  {
+    "recordId": "MR0174",
+    "patientId": "BN083",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK091",
+    "createdAt": "2025-06-06"
+  },
+  {
+    "recordId": "MR0175",
+    "patientId": "BN083",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK086",
+    "createdAt": "2025-06-22"
+  },
+  {
+    "recordId": "MR0176",
+    "patientId": "BN084",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK096",
+    "createdAt": "2025-06-24"
+  },
+  {
+    "recordId": "MR0177",
+    "patientId": "BN084",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK015",
+    "createdAt": "2025-06-04"
+  },
+  {
+    "recordId": "MR0178",
+    "patientId": "BN085",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK034",
+    "createdAt": "2025-06-04"
+  },
+  {
+    "recordId": "MR0179",
+    "patientId": "BN085",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK068",
+    "createdAt": "2025-07-03"
+  },
+  {
+    "recordId": "MR0180",
+    "patientId": "BN085",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK034",
+    "createdAt": "2025-06-30"
+  },
+  {
+    "recordId": "MR0181",
+    "patientId": "BN086",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK012",
+    "createdAt": "2025-06-08"
+  },
+  {
+    "recordId": "MR0182",
+    "patientId": "BN086",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK014",
+    "createdAt": "2025-06-21"
+  },
+  {
+    "recordId": "MR0183",
+    "patientId": "BN087",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK083",
+    "createdAt": "2025-06-29"
+  },
+  {
+    "recordId": "MR0184",
+    "patientId": "BN087",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK099",
+    "createdAt": "2025-06-25"
+  },
+  {
+    "recordId": "MR0185",
+    "patientId": "BN088",
+    "doctorId": null,
+    "diagnosis": "Suy nhược cơ thể",
+    "treatment": "Bổ sung vitamin và truyền nước",
+    "roomCode": "PK046",
+    "createdAt": "2025-06-19"
+  },
+  {
+    "recordId": "MR0186",
+    "patientId": "BN089",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK079",
+    "createdAt": "2025-06-25"
+  },
+  {
+    "recordId": "MR0187",
+    "patientId": "BN089",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK055",
+    "createdAt": "2025-07-02"
+  },
+  {
+    "recordId": "MR0188",
+    "patientId": "BN089",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK021",
+    "createdAt": "2025-06-17"
+  },
+  {
+    "recordId": "MR0189",
+    "patientId": "BN090",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK035",
+    "createdAt": "2025-06-25"
+  },
+  {
+    "recordId": "MR0190",
+    "patientId": "BN090",
+    "doctorId": null,
+    "diagnosis": "Viêm mũi dị ứng",
+    "treatment": "Tránh dị nguyên và dùng kháng histamine",
+    "roomCode": "PK048",
+    "createdAt": "2025-06-19"
+  },
+  {
+    "recordId": "MR0191",
+    "patientId": "BN090",
+    "doctorId": null,
+    "diagnosis": "Đau dạ dày",
+    "treatment": "Uống thuốc kháng acid và ăn uống đúng giờ",
+    "roomCode": "PK091",
+    "createdAt": "2025-06-20"
+  },
+  {
+    "recordId": "MR0192",
+    "patientId": "BN091",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK085",
+    "createdAt": "2025-06-18"
+  },
+  {
+    "recordId": "MR0193",
+    "patientId": "BN092",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK060",
+    "createdAt": "2025-06-25"
+  },
+  {
+    "recordId": "MR0194",
+    "patientId": "BN093",
+    "doctorId": null,
+    "diagnosis": "Cảm cúm",
+    "treatment": "Nghỉ ngơi và uống paracetamol",
+    "roomCode": "PK047",
+    "createdAt": "2025-06-22"
+  },
+  {
+    "recordId": "MR0195",
+    "patientId": "BN093",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK039",
+    "createdAt": "2025-06-04"
+  },
+  {
+    "recordId": "MR0196",
+    "patientId": "BN093",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK050",
+    "createdAt": "2025-07-01"
+  },
+  {
+    "recordId": "MR0197",
+    "patientId": "BN094",
+    "doctorId": null,
+    "diagnosis": "Tăng huyết áp",
+    "treatment": "Dùng thuốc và theo dõi huyết áp",
+    "roomCode": "PK012",
+    "createdAt": "2025-06-12"
+  },
+  {
+    "recordId": "MR0198",
+    "patientId": "BN094",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK015",
+    "createdAt": "2025-06-04"
+  },
+  {
+    "recordId": "MR0199",
+    "patientId": "BN095",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK071",
+    "createdAt": "2025-07-03"
+  },
+  {
+    "recordId": "MR0200",
+    "patientId": "BN095",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK039",
+    "createdAt": "2025-06-05"
+  },
+  {
+    "recordId": "MR0201",
+    "patientId": "BN096",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK093",
+    "createdAt": "2025-06-04"
+  },
+  {
+    "recordId": "MR0202",
+    "patientId": "BN097",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK046",
+    "createdAt": "2025-06-25"
+  },
+  {
+    "recordId": "MR0203",
+    "patientId": "BN097",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK002",
+    "createdAt": "2025-06-14"
+  },
+  {
+    "recordId": "MR0204",
+    "patientId": "BN098",
+    "doctorId": null,
+    "diagnosis": "Tiêu chảy cấp",
+    "treatment": "Uống oresol và theo dõi",
+    "roomCode": "PK026",
+    "createdAt": "2025-06-27"
+  },
+  {
+    "recordId": "MR0205",
+    "patientId": "BN098",
+    "doctorId": null,
+    "diagnosis": "Viêm họng cấp",
+    "treatment": "Uống kháng sinh 7 ngày",
+    "roomCode": "PK059",
+    "createdAt": "2025-06-28"
+  },
+  {
+    "recordId": "MR0206",
+    "patientId": "BN098",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK021",
+    "createdAt": "2025-06-18"
+  },
+  {
+    "recordId": "MR0207",
+    "patientId": "BN099",
+    "doctorId": null,
+    "diagnosis": "Thiếu máu",
+    "treatment": "Bổ sung sắt và kiểm tra định kỳ",
+    "roomCode": "PK077",
+    "createdAt": "2025-06-14"
+  },
+  {
+    "recordId": "MR0208",
+    "patientId": "BN099",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK001",
+    "createdAt": "2025-06-20"
+  },
+  {
+    "recordId": "MR0209",
+    "patientId": "BN100",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK007",
+    "createdAt": "2025-07-03"
+  },
+  {
+    "recordId": "MR0210",
+    "patientId": "BN100",
+    "doctorId": null,
+    "diagnosis": "Viêm kết mạc",
+    "treatment": "Nhỏ mắt bằng dung dịch kháng sinh",
+    "roomCode": "PK049",
+    "createdAt": "2025-06-17"
+  },
+  {
+    "recordId": "MR0211",
+    "patientId": "BN100",
+    "doctorId": null,
+    "diagnosis": "Viêm da cơ địa",
+    "treatment": "Bôi thuốc corticosteroid",
+    "roomCode": "PK099",
+    "createdAt": "2025-06-12"
+  }
+]
