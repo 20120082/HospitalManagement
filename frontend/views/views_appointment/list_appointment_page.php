@@ -31,32 +31,48 @@
                     <?php foreach ($appointments as $appointment): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($appointment['id']); ?></td>
-                            <td> <?php foreach ($patients as $patient): ?>
-                                <?php if ($patient['patientId'] == $appointment['idPatient']): ?>
-                                <?php echo htmlspecialchars($patient['fullName']); ?>
-                                <?php break; ?>
-                                <?php endif; ?>
-                            <?php endforeach; ?>-<?php echo htmlspecialchars($appointment['idPatient']); ?></td>
+                            <td>
+                                <?php
+                                    $patientName = '';
+                                    $patientEmail = '';
+                                    foreach ($patients as $patient) {
+                                        if ($patient['patientId'] == $appointment['idPatient']) {
+                                            $patientName = $patient['fullName'];
+                                            $patientEmail = isset($patient['email']) ? $patient['email'] : '';
+                                            break;
+                                        }
+                                    }
+                                    echo htmlspecialchars($patientName) . '-' . htmlspecialchars($appointment['idPatient']);
+                                ?>
+                            </td>
                             <td><?php foreach ($doctors as $doctor): ?>
                                 <?php if ($doctor['id'] == $appointment['idDoctor']): ?>
                                 <?php echo htmlspecialchars($doctor['name']); ?>
                                 <?php break; ?>
                                 <?php endif; ?>
                             <?php endforeach; ?></td>
-                            <td><?php foreach ($rooms as $room): ?>
-                                <?php if ($room['roomCode'] == $appointment['idRoom']): ?>
-                                <?php echo htmlspecialchars($room['roomName']); ?>
-                                <?php break; ?>
-                                <?php endif; ?>
-                            <?php endforeach; ?></td>
+                            <td>
+                                <?php
+                                    $roomName = '';
+                                    foreach ($rooms as $room) {
+                                        if ($room['roomCode'] == $appointment['idRoom']) {
+                                            $roomName = $room['roomName'];
+                                            break;
+                                        }
+                                    }
+                                    echo htmlspecialchars($roomName);
+                                ?>
+                            </td>
                             <td><?php echo htmlspecialchars($appointment['startTime']); ?></td>
                             <td><?php echo htmlspecialchars($appointment['status']); ?></td>
                             <td>
                                 <button type="button" class="btn btn-success btn-sm send-appointment-notify-btn" 
                                     data-id="<?php echo htmlspecialchars($appointment['id']); ?>"
                                     data-patient-id="<?php echo htmlspecialchars($appointment['idPatient']); ?>"
+                                    data-patient-name="<?php echo htmlspecialchars($patientName); ?>"
+                                    data-patient-email="<?php echo htmlspecialchars($patientEmail); ?>"
                                     data-start-time="<?php echo htmlspecialchars($appointment['startTime']); ?>"
-                                    data-room="<?php echo htmlspecialchars($appointment['idRoom'] ?? 'Phòng khám'); ?>"
+                                    data-room="<?php echo htmlspecialchars($roomName ?: 'Phòng khám'); ?>"
                                     data-doctor="<?php foreach ($doctors as $doctor) { if ($doctor['id'] == $appointment['idDoctor']) { echo htmlspecialchars($doctor['name']); break; } } ?>">
                                     Gửi thông báo
                                 </button>
@@ -109,22 +125,17 @@
 document.querySelectorAll('.send-appointment-notify-btn').forEach(btn => {
     btn.addEventListener('click', function() {
         document.getElementById('notifyAppointmentId').value = this.dataset.id;
-        
         // Format thời gian cho dễ đọc
         const appointmentTime = this.dataset.startTime;
         const formattedTime = formatDateTime(appointmentTime);
         document.getElementById('notifyAppointmentTime').value = formattedTime;
-        
-        // Set room - nếu là 0 hoặc rỗng thì hiển thị "Phòng khám"
+        // Set room - luôn là tên phòng khám
         const roomValue = this.dataset.room;
-        const displayRoom = (!roomValue || roomValue === '0') ? 'Phòng khám' : 'Phòng ' + roomValue;
-        document.getElementById('notifyAppointmentRoom').value = displayRoom;
-        
+        document.getElementById('notifyAppointmentRoom').value = roomValue || 'Phòng khám';
         document.getElementById('notifyAppointmentDoctor').value = this.dataset.doctor;
-        
-        // Reset form
-        document.querySelector('#appointmentNotifyForm [name="to"]').value = '';
-        document.querySelector('#appointmentNotifyForm [name="patientName"]').value = '';
+        // Tự động điền email và tên bệnh nhân
+        document.querySelector('#appointmentNotifyForm [name="to"]').value = this.dataset.patientEmail || '';
+        document.querySelector('#appointmentNotifyForm [name="patientName"]').value = this.dataset.patientName || '';
         document.getElementById('appointmentNotifyResult').textContent = '';
         var modal = new bootstrap.Modal(document.getElementById('appointmentNotifyModal'));
         modal.show();
