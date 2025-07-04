@@ -4,9 +4,9 @@ import java.time.LocalDateTime;
 
 public class AppointmentDTO {
     private Integer id;
-    private Integer idPatient;
+    private String idPatient;
     private Integer idDoctor;
-    private Integer idRoom;
+    private String idRoom;
     private LocalDateTime startTime;
     private String status;
 
@@ -18,11 +18,11 @@ public class AppointmentDTO {
         this.id = id;
     }
 
-    public Integer getIdPatient() {
+    public String getIdPatient() {
         return idPatient;
     }
 
-    public void setIdPatient(Integer idPatient) {
+    public void setIdPatient(String idPatient) {
         this.idPatient = idPatient;
     }
 
@@ -34,11 +34,11 @@ public class AppointmentDTO {
         this.idDoctor = idDoctor;
     }
 
-    public Integer getIdRoom() {
+    public String getIdRoom() {
         return idRoom;
     }
 
-    public void setIdRoom(Integer idRoom) {
+    public void setIdRoom(String idRoom) {
         this.idRoom = idRoom;
     }
 

@@ -11,13 +11,13 @@ public class Appointment {
     private Integer id;
 
     @Column(name = "Id_Patient", nullable = false)
-    private Integer idPatient;
+    private String idPatient;
 
     @Column(name = "Id_Doctor", nullable = false)
     private Integer idDoctor;
 
     @Column(name = "Id_Room", nullable = false)
-    private Integer idRoom;
+    private String idRoom;
 
     @Column(name = "StartTime", nullable = false)
     private LocalDateTime startTime;
@@ -33,11 +33,11 @@ public class Appointment {
         this.id = id;
     }
 
-    public Integer getIdPatient() {
+    public String getIdPatient() {
         return idPatient;
     }
 
-    public void setIdPatient(Integer idPatient) {
+    public void setIdPatient(String idPatient) {
         this.idPatient = idPatient;
     }
 
@@ -49,11 +49,11 @@ public class Appointment {
         this.idDoctor = idDoctor;
     }
 
-    public Integer getIdRoom() {
+    public String getIdRoom() {
         return idRoom;
     }
 
-    public void setIdRoom(Integer idRoom) {
+    public void setIdRoom(String idRoom) {
         this.idRoom = idRoom;
     }
 
