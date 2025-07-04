@@ -2,7 +2,8 @@
 class Appointment {
     private $apiBaseUrl = 'http://localhost:8082/api/appointments';
     private $doctorApiBaseUrl = 'http://localhost:8081/api/doctors';
-
+    private $patientApiBaseUrl = 'http://localhost:8090/api/patients';
+    private $roomApiBaseUrl = 'http://localhost:8092/api/rooms';
     public function getAllAppointments() {
         $curl = curl_init();
         curl_setopt_array($curl, [
@@ -20,7 +21,42 @@ class Appointment {
         return [];
     }
 
+    public function getAllPatients()
+    {
+        $curl = curl_init();
+        curl_setopt_array($curl, [
+            CURLOPT_URL => $this->patientApiBaseUrl,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => ['Content-Type: application/json; charset=UTF-8'],
+        ]);
+        $response = curl_exec($curl);
+        $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        curl_close($curl);
+
+        if ($httpCode === 200) {
+            return json_decode($response, true);
+        }
+        return [];
+    }
     
+    public function getAllRooms()
+    {
+        $curl = curl_init();
+        curl_setopt_array($curl, [
+            CURLOPT_URL => $this->roomApiBaseUrl,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => ['Content-Type: application/json; charset=UTF-8'],
+        ]);
+        $response = curl_exec($curl);
+        $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        curl_close($curl);
+
+        if ($httpCode === 200) {
+            return json_decode($response, true);
+        }
+        return [];
+    }
+
     public function getAllDoctors() {
         $curl = curl_init();
         curl_setopt_array($curl, [

@@ -14,9 +14,9 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Patient ID</th>
+                    <th>Patient-ID Patient</th>
                     <th>Doctor Name</th>
-                    <th>Room ID</th>
+                    <th>Room</th>
                     <th>Start Time</th>
                     <th>Status</th>
                     <th>Actions</th>
@@ -31,14 +31,24 @@
                     <?php foreach ($appointments as $appointment): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($appointment['id']); ?></td>
-                            <td><?php echo htmlspecialchars($appointment['idPatient']); ?></td>
+                            <td> <?php foreach ($patients as $patient): ?>
+                                <?php if ($patient['patientId'] == $appointment['idPatient']): ?>
+                                <?php echo htmlspecialchars($patient['fullName']); ?>
+                                <?php break; ?>
+                                <?php endif; ?>
+                            <?php endforeach; ?>-<?php echo htmlspecialchars($appointment['idPatient']); ?></td>
                             <td><?php foreach ($doctors as $doctor): ?>
                                 <?php if ($doctor['id'] == $appointment['idDoctor']): ?>
                                 <?php echo htmlspecialchars($doctor['name']); ?>
                                 <?php break; ?>
                                 <?php endif; ?>
                             <?php endforeach; ?></td>
-                            <td><?php echo htmlspecialchars($appointment['idRoom'] ?? 'Chưa xác định'); ?></td>
+                            <td><?php foreach ($rooms as $room): ?>
+                                <?php if ($room['roomCode'] == $appointment['idRoom']): ?>
+                                <?php echo htmlspecialchars($room['roomName']); ?>
+                                <?php break; ?>
+                                <?php endif; ?>
+                            <?php endforeach; ?></td>
                             <td><?php echo htmlspecialchars($appointment['startTime']); ?></td>
                             <td><?php echo htmlspecialchars($appointment['status']); ?></td>
                             <td>

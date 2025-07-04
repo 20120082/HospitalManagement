@@ -12,8 +12,15 @@
     <h2>Create Appointment</h2>
         <form action="index.php?controller=Appointment&action=create" method="POST" class="mb-5">
             <div class="mb-3">
-                <label for="idPatient" class="form-label">Patient ID</label>
-                <input type="number" class="form-control" id="idPatient" name="idPatient" required>
+                <label for="idPatient" class="form-label">Patient</label>
+                <select class="form-select" name="idPatient" required>
+                    <option value="">Select a patient</option>
+                        <?php
+                            foreach ($patients as $patient) {
+                                echo "<option value='{$patient['patientId']}'>{$patient['patientId']} - {$patient['fullName']}</option>";
+                                }
+                        ?>
+                    </select>
             </div>
             <div class="mb-3">
                 <label for="idDoctor" class="form-label">Doctor</label>
@@ -27,8 +34,15 @@
                     </select>
             </div>
             <div class="mb-3">
-                <label for="idRoom" class="form-label">Room ID</label>
-                <input type="number" class="form-control" id="idRoom" name="idRoom" required>
+                <label for="idRoom" class="form-label">Room</label>
+                <select class="form-select" name="idRoom" required>
+                    <option value="">Select a room</option>
+                        <?php
+                            foreach ($rooms as $room) {
+                                echo "<option value='{$room['roomCode']}'>{$room['roomName']}</option>";
+                                }
+                        ?>
+                    </select>
             </div>
             <div class="mb-3">
                 <label for="startTime" class="form-label">Start Time</label>

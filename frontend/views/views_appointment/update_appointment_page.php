@@ -14,23 +14,42 @@
             <div class="mb-3">
                 <label for="appointmentId" class="form-label">Select Appointment</label>
                 <select class="form-select" id="appointmentId" name="appointmentId" required>
-                    <?php foreach ($appointments as $appointment): ?>
+                     <?php foreach ($appointments as $appointment): ?>
                         <option value="<?php echo $appointment['id']; ?>">
-                            ID: <?php echo $appointment['id']; ?> - Patient: <?php echo $appointment['idPatient']; ?> - Doctor: 
+                            ID: <?php echo $appointment['id']; ?> - Patient: 
+                            <?php foreach ($patients as $patient): ?>
+                                <?php if ($patient['patientId'] == $appointment['idPatient']): ?>
+                                <?php echo htmlspecialchars($patient['fullName']); ?>
+                                <?php break; ?>
+                                <?php endif; ?>
+                            <?php endforeach; ?><?php echo $appointment['idPatient']; ?> - Doctor:
                             <?php foreach ($doctors as $doctor): ?>
                                 <?php if ($doctor['id'] == $appointment['idDoctor']): ?>
                                 <?php echo htmlspecialchars($doctor['name']); ?>
                                 <?php break; ?>
                                 <?php endif; ?>
+                            <?php endforeach; ?>- Room:
+                                <?php foreach ($rooms as $room): ?>
+                                <?php if ($room['roomCode'] == $appointment['idRoom']): ?>
+                                <?php echo htmlspecialchars($room['roomName']); ?>
+                                <?php break; ?>
+                                <?php endif; ?>
                             <?php endforeach; ?>
-                            - Room: <?php echo $appointment['idRoom']; ?> - Time: <?php echo $appointment['startTime']; ?> - Status: <?php echo $appointment['status']; ?>
+                                - Time: <?php echo $appointment['startTime']; ?> - Status: <?php echo $appointment['status']; ?>
                         </option>
                     <?php endforeach; ?>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="idPatient" class="form-label">Patient ID</label>
-                <input type="number" class="form-control" id="idPatient" name="idPatient" required>
+                <label for="idPatient" class="form-label">Patient-Patient ID</label>
+                <select class="form-select" name="idPatient" required>
+                    <option value="">Select a patient</option>
+                        <?php
+                            foreach ($patients as $patient) {
+                                echo "<option value='{$patient['patientId']}'>{$patient['patientId']} - {$patient['fullName']}</option>";
+                                }
+                        ?>
+                    </select>
             </div>
             <div class="mb-3">
                 <label for="idDoctor" class="form-label">Doctor</label>
@@ -44,8 +63,15 @@
                     </select>
             </div>
             <div class="mb-3">
-                <label for="idRoom" class="form-label">Room ID</label>
-                <input type="number" class="form-control" id="idRoom" name="idRoom" required>
+                <label for="idRoom" class="form-label">Room</label>
+                <select class="form-select" name="idRoom" required>
+                    <option value="">Select a room</option>
+                        <?php
+                            foreach ($rooms as $room) {
+                                echo "<option value='{$room['roomCode']}'>{$room['roomName']}</option>";
+                                }
+                        ?>
+                    </select>
             </div>
             <div class="mb-3">
                 <label for="startTime" class="form-label">Start Time</label>

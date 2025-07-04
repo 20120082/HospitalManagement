@@ -15,24 +15,32 @@ class AppointmentController {
     }
     public function createPage()
     {
+        $rooms=$this->model->getAllRooms();
+        $patients=$this->model->getAllPatients();
         $appointments = $this->model->getAllAppointments();
         $doctors=  $this->model->getAllDoctors();
         require_once 'views/views_appointment/create_appointment_page.php';
     }
     public function deletePage()
     {
+        $rooms=$this->model->getAllRooms();
+        $patients=$this->model->getAllPatients();
         $appointments = $this->model->getAllAppointments();
         $doctors=  $this->model->getAllDoctors();
         require_once 'views/views_appointment/delete_appointment_page.php';
     }
     public function updatePage()
     {
+        $rooms=$this->model->getAllRooms();
+        $patients=$this->model->getAllPatients();
         $appointments = $this->model->getAllAppointments();
         $doctors=  $this->model->getAllDoctors();
         require_once 'views/views_appointment/update_appointment_page.php';
     }
     public function listPage()
     {
+        $rooms=$this->model->getAllRooms();
+        $patients=$this->model->getAllPatients();
         $appointments = $this->model->getAllAppointments();
         $doctors=  $this->model->getAllDoctors();
         require_once 'views/views_appointment/list_appointment_page.php';
@@ -41,9 +49,9 @@ class AppointmentController {
     public function create() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data = [
-                'idPatient' => (int)$_POST['idPatient'],
+                'idPatient' => $_POST['idPatient'],
                 'idDoctor' => (int)$_POST['idDoctor'],
-                'idRoom' => (int)$_POST['idRoom'],
+                'idRoom' => $_POST['idRoom'],
                 'startTime' => $_POST['startTime'],
                 'status' => $_POST['status']
             ];
@@ -58,9 +66,9 @@ class AppointmentController {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $appointmentId = $_POST['appointmentId'];
             $data = [
-                'idPatient' => (int)$_POST['idPatient'],
+                'idPatient' => $_POST['idPatient'],
                 'idDoctor' => (int)$_POST['idDoctor'],
-                'idRoom' => (int)$_POST['idRoom'],
+                'idRoom' => $_POST['idRoom'],
                 'startTime' => $_POST['startTime'],
                 'status' => $_POST['status']
             ];

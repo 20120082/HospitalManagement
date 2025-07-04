@@ -16,13 +16,26 @@
                 <select class="form-select" id="appointmentId" name="appointmentId" required>
                     <?php foreach ($appointments as $appointment): ?>
                         <option value="<?php echo $appointment['id']; ?>">
-                            ID: <?php echo $appointment['id']; ?> - Patient: <?php echo $appointment['idPatient']; ?> - Doctor:
+                            ID: <?php echo $appointment['id']; ?> - Patient: 
+                            <?php foreach ($patients as $patient): ?>
+                                <?php if ($patient['patientId'] == $appointment['idPatient']): ?>
+                                <?php echo htmlspecialchars($patient['fullName']); ?>
+                                <?php break; ?>
+                                <?php endif; ?>
+                            <?php endforeach; ?><?php echo $appointment['idPatient']; ?> - Doctor:
                             <?php foreach ($doctors as $doctor): ?>
                                 <?php if ($doctor['id'] == $appointment['idDoctor']): ?>
                                 <?php echo htmlspecialchars($doctor['name']); ?>
                                 <?php break; ?>
                                 <?php endif; ?>
-                            <?php endforeach; ?>- Room: <?php echo $appointment['idRoom']; ?> - Time: <?php echo $appointment['startTime']; ?> - Status: <?php echo $appointment['status']; ?>
+                            <?php endforeach; ?>- Room:
+                                <?php foreach ($rooms as $room): ?>
+                                <?php if ($room['roomCode'] == $appointment['idRoom']): ?>
+                                <?php echo htmlspecialchars($room['roomName']); ?>
+                                <?php break; ?>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                                - Time: <?php echo $appointment['startTime']; ?> - Status: <?php echo $appointment['status']; ?>
                         </option>
                     <?php endforeach; ?>
                 </select>
