@@ -3,7 +3,7 @@
 require_once 'models/Medicine.php';
 
 class MedicineController {
-    private $apiBaseUrl = 'http://localhost:8082/api/medicines'; // Sửa lại nếu backend chạy port khác
+    private $apiBaseUrl = 'http://localhost:8084/api/medicines'; // Sửa lại nếu backend chạy port khác
 
     private function request($method, $url, $data = null) {
         $ch = curl_init();

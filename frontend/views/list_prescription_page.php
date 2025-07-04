@@ -42,6 +42,41 @@
         </table>
         <a href="index.php?controller=Prescription" class="btn btn-primary">Back</a>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+        document.querySelectorAll('.btn-send-notify').forEach(function(btn) {
+            btn.addEventListener('click', async function() {
+                const patientId = this.getAttribute('data-patient-id');
+                const prescriptionId = this.getAttribute('data-prescription-id');
+                // Gọi AJAX lấy thông tin bệnh nhân và đơn thuốc
+                try {
+                    const res = await fetch(`index.php?controller=Prescription&action=GetPatientAndPrescriptionInfo&idPatient=${patientId}&idPrescription=${prescriptionId}`);
+                    const info = await res.json();
+                    if (!info.success) {
+                        alert('Không lấy được thông tin bệnh nhân hoặc đơn thuốc!');
+                        return;
+                    }
+                    // Gửi thông báo
+                    const notifyRes = await fetch('controllers/PrescriptionNotificationController.php', {
+                        method: 'POST',
+                        body: new URLSearchParams({
+                            to: info.email,
+                            patientName: info.name,
+                            prescriptionDetail: info.prescriptionDetail,
+                            prescriptionTime: info.prescriptionTime
+                        })
+                    });
+                    const notifyResult = await notifyRes.json();
+                    if (notifyResult.success) {
+                        alert('Đã gửi thông báo đơn thuốc thành công!');
+                    } else {
+                        alert('Lỗi gửi thông báo: ' + (notifyResult.error || 'Không gửi được thông báo'));
+                    }
+                } catch (e) {
+                    alert('Lỗi kết nối hoặc xử lý!');
+                }
+            });
+        });
+        </script>
 </body>
     
         

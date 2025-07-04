@@ -1,7 +1,4 @@
 <?php
-require_once 'controllers/PrescriptionController.php';
-require_once 'controllers/DoctorController.php';
-
 $action = $_GET['action'] ?? 'index';
 $controllerName = isset($_GET['controller']) ? $_GET['controller'] : '';
 switch ($controllerName) {
@@ -15,7 +12,12 @@ switch ($controllerName) {
         $controller = new MedicineController();
         break;
     case 'Doctor':
+        require_once 'controllers/DoctorController.php';
         $controller = new DoctorController();
+        break;
+    case 'Appointment':
+        require_once 'controllers/AppointmentController.php';
+        $controller = new AppointmentController();
         break;
     default:
         $controller = null;
@@ -53,6 +55,18 @@ if(isset($_GET['controller']) && $controller) {
             break;
         case 'update':
             $controller->update();
+            break;
+        case 'sendAppointmentNotification':
+            if (method_exists($controller, 'sendAppointmentNotification')) {
+                $controller->sendAppointmentNotification();
+            }
+            break;
+        case 'SendPrescriptionNotificationPage':
+            if (method_exists($controller, 'sendPrescriptionNotificationPage')) {
+                $controller->sendPrescriptionNotificationPage();
+            } else {
+                require_once 'views/send_prescription_notification.php';
+            }
             break;
         default:
             if (method_exists($controller, 'index')) {
