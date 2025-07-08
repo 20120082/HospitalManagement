@@ -19,6 +19,10 @@ switch ($controllerName) {
         require_once 'controllers/AppointmentController.php';
         $controller = new AppointmentController();
         break;
+    case 'Notification':
+        require_once 'controllers/NotificationController.php';
+        $controller = new NotificationController();
+        break;
     default:
         $controller = null;
 }
@@ -50,7 +54,10 @@ if(isset($_GET['controller']) && $controller) {
         case 'UpdatePage':
             $controller->updatePage();
             break;
-        case 'ListPage':
+        case 'listPage':
+            $controller->listPage();
+            break;
+        case 'ListPage':  // Giữ lại để tương thích
             $controller->listPage();
             break;
         case 'update':
@@ -59,6 +66,11 @@ if(isset($_GET['controller']) && $controller) {
         case 'sendAppointmentNotification':
             if (method_exists($controller, 'sendAppointmentNotification')) {
                 $controller->sendAppointmentNotification();
+            }
+            break;
+        case 'deleteAll':
+            if (method_exists($controller, 'deleteAll')) {
+                $controller->deleteAll();
             }
             break;
         default:

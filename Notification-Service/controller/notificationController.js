@@ -58,3 +58,37 @@ export const sendPrescriptionNotification = async (req, res) => {
   await Notification.create({ to, subject, text, type: 'prescription', status });
   res.json({ success: true, message: 'Đã gửi thông báo đơn thuốc!' });
 };
+
+// Lấy danh sách tất cả thông báo
+export const getAllNotifications = async (req, res) => {
+  try {
+    const notifications = await Notification.find().sort({ createdAt: -1 });
+    res.json({ success: true, data: notifications });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
+// Xóa thông báo theo ID
+export const deleteNotification = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deletedNotification = await Notification.findByIdAndDelete(id);
+    if (!deletedNotification) {
+      return res.status(404).json({ success: false, message: 'Không tìm thấy thông báo' });
+    }
+    res.json({ success: true, message: 'Đã xóa thông báo thành công' });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
+// Xóa tất cả thông báo
+export const deleteAllNotifications = async (req, res) => {
+  try {
+    await Notification.deleteMany({});
+    res.json({ success: true, message: 'Đã xóa tất cả thông báo thành công' });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
