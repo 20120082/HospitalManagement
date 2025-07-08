@@ -7,6 +7,8 @@ import notificationRoutes from './router/notificationRoutes.js';
 import { startConsumer } from './service/notificationConsumer.js';
 
 const app = express();
+
+// Middleware
 app.use(express.json());
 
 

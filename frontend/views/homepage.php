@@ -15,5 +15,6 @@
 <a href="index.php?controller=Doctor&action=index" class="btn btn-primary">Doctor Service</a>
 <a href="index.php?controller=Medicine&action=ListPage" class="btn btn-primary">Medicine Service</a>
 <a href="index.php?controller=Appointment&action=index" class="btn btn-primary">Appointment Service</a>
+<a href="index.php?controller=Notification&action=index" class="btn btn-success">Notification Management</a>
 </body>
 </html>
