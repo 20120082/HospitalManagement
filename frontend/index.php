@@ -61,13 +61,6 @@ if(isset($_GET['controller']) && $controller) {
                 $controller->sendAppointmentNotification();
             }
             break;
-        case 'SendPrescriptionNotificationPage':
-            if (method_exists($controller, 'sendPrescriptionNotificationPage')) {
-                $controller->sendPrescriptionNotificationPage();
-            } else {
-                require_once 'views/send_prescription_notification.php';
-            }
-            break;
         default:
             if (method_exists($controller, 'index')) {
                 $controller->index();

@@ -53,80 +53,13 @@
                             <td><?php echo ($d1['quantity']); ?></td>
                             <td><?php echo ($d1['unit']); ?></td>
                             <td><?php echo (number_format($d1['price'], 2)); ?></td>
-                            
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
             <p class="fw-bold total-amount">Tổng số tiền: <?php echo htmlspecialchars(number_format($totalAmount, 2)); ?> VND</p>
         <?php endif; ?>
-        <?php 
-            // Tìm thông tin bệnh nhân từ array patients
-            $currentPatient = null;
-            foreach ($patients as $patient) {
-                if ($patient['patientId'] == $prescription['idPatient']) {
-                    $currentPatient = $patient;
-                    break;
-                }
-            }
-        ?>
-        <form id="sendNotifyForm" method="POST" action="controllers/PrescriptionNotificationController.php" class="mb-3">
-            <div class="mb-2">
-                <label>Email bệnh nhân:</label>
-                <input type="email" name="to" class="form-control" required value="<?php echo htmlspecialchars($currentPatient['email'] ?? ''); ?>">
-            </div>
-            <div class="mb-2">
-                <label>Tên bệnh nhân:</label>
-                <input type="text" name="patientName" class="form-control" required value="<?php echo htmlspecialchars($currentPatient['fullName'] ?? ''); ?>">
-            </div>
-            <div class="mb-2">
-                <label>Chi tiết đơn thuốc:</label>
-                <textarea name="prescriptionDetail" class="form-control" rows="2" required><?php
-                    $detailLines = [];
-                    $totalAmount = 0;
-                    if (!empty($details)) {
-                        foreach ($details as $d1) {
-                            $line = ($d1['medicineName'] ?? ('ID:' . $d1['idMedicine'])) . ' x' . $d1['quantity'] . ' (' . number_format($d1['price'] * $d1['quantity'], 2) . ' VND)';
-                            $detailLines[] = $line;
-                            $totalAmount += $d1['price'] * $d1['quantity'];
-                        }
-                    }
-                    $prescriptionText = implode(', ', $detailLines);
-                    // Xóa dấu phẩy cuối cùng nếu có, rồi xuống dòng tổng giá tiền
-                    $prescriptionText .= "\nTổng giá tiền: " . number_format($totalAmount, 2) . " VND";
-                    echo htmlspecialchars($prescriptionText);
-                ?></textarea>
-            </div>
-            <div class="mb-2">
-                <label>Thời gian lấy thuốc:</label>
-                <input type="text" name="prescriptionTime" class="form-control" required placeholder="Nhập thời gian lấy thuốc">
-            </div>
-            <button type="submit" class="btn btn-success">Gửi thông báo đơn thuốc</button>
-        </form>
-        <div id="notifyResult"></div>
         <a href="index.php?controller=Prescription&action=ListPage" class="btn btn-primary">Back</a>
-        <script>
-        document.getElementById('sendNotifyForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const form = e.target;
-            const formData = new FormData(form);
-            document.getElementById('notifyResult').textContent = 'Đang gửi...';
-            try {
-                const response = await fetch('controllers/PrescriptionNotificationController.php', {
-                    method: 'POST',
-                    body: formData
-                });
-                const result = await response.json();
-                if(result.success) {
-                    document.getElementById('notifyResult').textContent = result.message;
-                } else {
-                    document.getElementById('notifyResult').textContent = 'Lỗi: ' + (result.error || 'Không gửi được thông báo');
-                }
-            } catch (err) {
-                document.getElementById('notifyResult').textContent = 'Lỗi kết nối tới Notification Service!';
-            }
-        });
-        </script>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

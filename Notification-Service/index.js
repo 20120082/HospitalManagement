@@ -4,10 +4,12 @@ import express from 'express';
 import { Eureka } from 'eureka-js-client';
 import mongoose from 'mongoose';
 import notificationRoutes from './router/notificationRoutes.js';
-
+import { startConsumer } from './service/notificationConsumer.js';
 
 const app = express();
 app.use(express.json());
+
+
 
 // Kết nối MongoDB
 const mongoUri = process.env.MONGODB_URI || `mongodb+srv://triet4work:PuTHRiqnZq0Iboej@minhtriet.cdqhrdy.mongodb.net/HospitalManagement?retryWrites=true&w=majority`;
@@ -39,8 +41,9 @@ const client = new Eureka({
 // Sử dụng router cho các endpoint thông báo
 app.use('/api/notify', notificationRoutes);
 
+// Start RabbitMQ consumer
+startConsumer();
+
 client.start();
 
 app.listen(8085, () => console.log('Notification service running on port 8085'));
-
-
