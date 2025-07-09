@@ -1,5 +1,5 @@
 <?php
-require_once 'models/Prescription.php';
+require_once __DIR__ . '/../models/Prescription.php';
 
 class PrescriptionController {
     private $model;
