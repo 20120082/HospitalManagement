@@ -1,31 +1,27 @@
 package com.example.demo.repository;
 
+import com.example.demo.model.Patient;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.data.mongodb.repository.Query;
-import org.springframework.stereotype.Repository;
+public interface PatientRepository extends MongoRepository<Patient, String>, PatientRepositoryCustom {
 
-import com.example.demo.model.Patient;
+    List<Patient> findByDeleteCheckFalse();
 
-@Repository
-public interface PatientRepository extends MongoRepository<Patient, String> {
-    Optional<Patient> findByPhoneNumber(String phoneNumber);
-    List<Patient> findByFullNameContainingIgnoreCaseAndDeleteCheckFalse(String fullName);
-    Optional<Patient> findByPatientIdAndDeleteCheckFalse(String patientId);
-    List<Patient> findAllByDeleteCheckFalse();
-    Optional<Patient> findByPatientId(String patientId);
-    Optional<Patient> findByEmail(String email);
-    boolean existsByPatientId(String patientId);
-    void deleteByPatientId(String patientId);
-    
-    @Query("{ 'createdAt': { $gte: ?0, $lt: ?1 }, 'deleteCheck': false }")
-    List<Patient> findByCreatedAtBetween(LocalDateTime start, LocalDateTime end);
+    Page<Patient> findByDeleteCheckFalse(Pageable pageable);
 
     long countByDeleteCheckFalse();
+
+    long countByCreatedAtBetweenAndDeleteCheckFalse(LocalDateTime start, LocalDateTime end);
     
-    @Query("{ 'fullName': { $regex: ?0, $options: 'i' }, 'deleteCheck': false }")
-    List<Patient> searchByFullNameRegex(String regex);
+    Optional<Patient> findByPatientIdAndDeleteCheckFalse(String patientId);
+    
+    boolean existsByPatientId(String patientId);
 }
+
+
