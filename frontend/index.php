@@ -38,6 +38,12 @@ switch ($controllerName) {
         require_once 'controllers/AppointmentController.php';
         $controller = new AppointmentController();
         break;
+    case 'User':
+        // Kiểm tra quyền truy cập User (chỉ admin)
+        $auth->checkControllerAccess('User', $action);
+        require_once 'controllers/UserController.php';
+        $controller = new UserController();
+        break;
     case 'Notification':
         // Kiểm tra quyền truy cập Notification - Tạm thời disable
         // $auth->checkControllerAccess('Notification', $action);
@@ -109,9 +115,6 @@ if(isset($_GET['controller']) && $controller) {
         case 'doctorDashboard':
             $controller->doctorDashboard();
             break;
-        case 'patientDashboard':
-            $controller->patientDashboard();
-            break;
         case 'nurseDashboard':
             $controller->nurseDashboard();
             break;
@@ -120,6 +123,18 @@ if(isset($_GET['controller']) && $controller) {
             break;
         case 'accessDenied':
             $controller->accessDenied();
+            break;
+        case 'store':
+            $controller->store();
+            break;
+        case 'show':
+            $controller->show();
+            break;
+        case 'edit':
+            $controller->edit();
+            break;
+        case 'toggleStatus':
+            $controller->toggleStatus();
             break;
         default:
             if (method_exists($controller, 'index')) {

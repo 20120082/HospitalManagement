@@ -106,7 +106,7 @@
                         <div class="demo-accounts">
                             <h6><i class="fas fa-info-circle"></i> Tài khoản demo:</h6>
                             <small>
-                                <strong>Admin:</strong> admin / password123<br>
+                                <strong>Admin:</strong> admin1 / password123<br>
                                 <strong>Doctor:</strong> doctor1 / password123<br>
                                 <strong>Nurse:</strong> nurse1 / password123<br>
                                 <strong>Receptionist:</strong> receptionist1 / password123

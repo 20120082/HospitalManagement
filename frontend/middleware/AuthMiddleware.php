@@ -43,11 +43,7 @@ class AuthMiddleware {
         
         switch($controller_name) {
             case 'Prescription':
-                if(!in_array($role_name, ['admin', 'doctor', 'nurse', 'patient'])) {
-                    $this->accessDenied();
-                }
-                // Patient chỉ được xem đơn thuốc của mình
-                if($role_name == 'patient' && !in_array($action, ['listPage', 'viewDetails'])) {
+                if(!in_array($role_name, ['admin', 'doctor', 'nurse'])) {
                     $this->accessDenied();
                 }
                 break;
@@ -69,11 +65,7 @@ class AuthMiddleware {
                 break;
                 
             case 'Appointment':
-                if(!in_array($role_name, ['admin', 'doctor', 'patient', 'receptionist'])) {
-                    $this->accessDenied();
-                }
-                // Patient chỉ được xem và tạo lịch hẹn của mình
-                if($role_name == 'patient' && !in_array($action, ['listPage', 'CreatePage', 'create'])) {
+                if(!in_array($role_name, ['admin', 'doctor', 'receptionist'])) {
                     $this->accessDenied();
                 }
                 break;

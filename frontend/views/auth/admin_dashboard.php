@@ -85,9 +85,9 @@ if(!isset($_SESSION['user_id'])) {
                                         <div class="card">
                                             <div class="card-body text-center">
                                                 <i class="fas fa-users fa-3x text-primary mb-3"></i>
-                                                <h5>Quản lý người dùng</h5>
+                                                <h5>Quản lý tài khoản</h5>
                                                 <p>Thêm, sửa, xóa tài khoản người dùng</p>
-                                                <a href="#" class="btn btn-primary">Truy cập</a>
+                                                <a href="index.php?controller=User&action=index" class="btn btn-primary">Truy cập</a>
                                             </div>
                                         </div>
                                     </div>

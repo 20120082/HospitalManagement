@@ -44,8 +44,8 @@ if(!isset($_SESSION['user_id'])) {
                     <?php 
                     $role = $_SESSION['role_name'];
                     
-                    // Prescription Service - Admin, Doctor, Nurse, Patient
-                    if(in_array($role, ['admin', 'doctor', 'nurse', 'patient'])): ?>
+                    // Prescription Service - Admin, Doctor, Nurse only
+                    if(in_array($role, ['admin', 'doctor', 'nurse'])): ?>
                     <div class="col-md-3 mb-3">
                         <a href="index.php?controller=Prescription&action=index" class="btn btn-primary w-100">
                             <i class="fas fa-prescription-bottle"></i><br>
@@ -77,8 +77,8 @@ if(!isset($_SESSION['user_id'])) {
                     <?php endif; ?>
                     
                     <?php 
-                    // Appointment Service - Admin, Doctor, Patient, Receptionist
-                    if(in_array($role, ['admin', 'doctor', 'patient', 'receptionist'])): ?>
+                    // Appointment Service - Admin, Doctor, Receptionist only
+                    if(in_array($role, ['admin', 'doctor', 'receptionist'])): ?>
                     <div class="col-md-3 mb-3">
                         <a href="index.php?controller=Appointment&action=index" class="btn btn-primary w-100">
                             <i class="fas fa-calendar-alt"></i><br>

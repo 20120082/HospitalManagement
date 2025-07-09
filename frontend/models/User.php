@@ -168,5 +168,167 @@ class User {
         }
         return false;
     }
+
+    // Lấy tất cả users
+    public function getAllUsers() {
+        $query = "SELECT u.*, r.role_name FROM " . $this->table . " u 
+                  JOIN roles r ON u.role_id = r.role_id 
+                  ORDER BY u.created_at DESC";
+        
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // Lấy tất cả roles
+    public function getAllRoles() {
+        $query = "SELECT * FROM roles ORDER BY role_name";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // Kiểm tra username đã tồn tại
+    public function usernameExists($username, $exclude_user_id = null) {
+        $query = "SELECT user_id FROM " . $this->table . " WHERE username = :username";
+        
+        if($exclude_user_id) {
+            $query .= " AND user_id != :exclude_user_id";
+        }
+        
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':username', $username);
+        
+        if($exclude_user_id) {
+            $stmt->bindParam(':exclude_user_id', $exclude_user_id);
+        }
+        
+        $stmt->execute();
+        return $stmt->rowCount() > 0;
+    }
+
+    // Kiểm tra email đã tồn tại
+    public function emailExists($email, $exclude_user_id = null) {
+        $query = "SELECT user_id FROM " . $this->table . " WHERE email = :email";
+        
+        if($exclude_user_id) {
+            $query .= " AND user_id != :exclude_user_id";
+        }
+        
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':email', $email);
+        
+        if($exclude_user_id) {
+            $stmt->bindParam(':exclude_user_id', $exclude_user_id);
+        }
+        
+        $stmt->execute();
+        return $stmt->rowCount() > 0;
+    }
+
+    // Tạo user mới
+    public function createUser($username, $email, $password, $full_name, $role_id, $phone = null, $address = null) {
+        $password_hash = password_hash($password, PASSWORD_DEFAULT);
+        
+        $query = "INSERT INTO " . $this->table . " 
+                  (username, email, password_hash, full_name, role_id, phone, address, created_at) 
+                  VALUES (:username, :email, :password_hash, :full_name, :role_id, :phone, :address, NOW())";
+        
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':username', $username);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password_hash', $password_hash);
+        $stmt->bindParam(':full_name', $full_name);
+        $stmt->bindParam(':role_id', $role_id);
+        $stmt->bindParam(':phone', $phone);
+        $stmt->bindParam(':address', $address);
+        
+        return $stmt->execute();
+    }
+
+    // Cập nhật user
+    public function updateUser($user_id, $username, $email, $full_name, $role_id, $phone = null, $address = null, $is_active = 1, $new_password = null) {
+        $query = "UPDATE " . $this->table . " 
+                  SET username = :username, email = :email, full_name = :full_name, 
+                      role_id = :role_id, phone = :phone, address = :address, is_active = :is_active";
+        
+        if(!empty($new_password)) {
+            $query .= ", password_hash = :password_hash";
+        }
+        
+        $query .= " WHERE user_id = :user_id";
+        
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':username', $username);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':full_name', $full_name);
+        $stmt->bindParam(':role_id', $role_id);
+        $stmt->bindParam(':phone', $phone);
+        $stmt->bindParam(':address', $address);
+        $stmt->bindParam(':is_active', $is_active);
+        $stmt->bindParam(':user_id', $user_id);
+        
+        if(!empty($new_password)) {
+            $password_hash = password_hash($new_password, PASSWORD_DEFAULT);
+            $stmt->bindParam(':password_hash', $password_hash);
+        }
+        
+        return $stmt->execute();
+    }
+
+    // Xóa user
+    public function deleteUser($user_id) {
+        // Xóa sessions của user trước
+        $this->destroyUserSessions($user_id);
+        
+        // Xóa user
+        $query = "DELETE FROM " . $this->table . " WHERE user_id = :user_id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':user_id', $user_id);
+        
+        return $stmt->execute();
+    }
+
+    // Vô hiệu hóa user (thay vì xóa vĩnh viễn)
+    public function disableUser($user_id) {
+        // Vô hiệu hóa user và xóa sessions
+        $this->destroyUserSessions($user_id);
+        
+        $query = "UPDATE " . $this->table . " 
+                  SET is_active = 0, updated_at = NOW() 
+                  WHERE user_id = :user_id";
+        
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':user_id', $user_id);
+        
+        return $stmt->execute();
+    }
+
+    // Thay đổi trạng thái user (active/inactive)
+    public function toggleUserStatus($user_id) {
+        $query = "UPDATE " . $this->table . " 
+                  SET is_active = NOT is_active 
+                  WHERE user_id = :user_id";
+        
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':user_id', $user_id);
+        
+        return $stmt->execute();
+    }
+
+    // Lấy user với thông tin role
+    public function getUserWithRole($user_id) {
+        $query = "SELECT u.*, r.role_name FROM " . $this->table . " u 
+                  JOIN roles r ON u.role_id = r.role_id 
+                  WHERE u.user_id = :user_id";
+        
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':user_id', $user_id);
+        $stmt->execute();
+        
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }
 ?>
