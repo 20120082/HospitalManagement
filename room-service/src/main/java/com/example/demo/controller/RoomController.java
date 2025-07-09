@@ -2,7 +2,12 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Room;
 import com.example.demo.service.RoomService;
+
+import jakarta.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,62 +18,38 @@ import java.util.List;
 public class RoomController {
 
     @Autowired
-    private RoomService service;
-
-    @GetMapping
-    public ResponseEntity<List<Room>> getAll() {
-        return ResponseEntity.ok(service.getAll());
-    }
+    private RoomService roomService;
 
     @PostMapping
-    public ResponseEntity<Room> create(@RequestBody Room room) {
-        return ResponseEntity.ok(service.add(room));
+    public ResponseEntity<Room> createRoom(@Valid @RequestBody Room room) {
+        return ResponseEntity.ok(roomService.createRoom(room));
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Room> update(@PathVariable String id, @RequestBody Room room) {
-        return ResponseEntity.ok(service.update(id, room));
+    @PutMapping("/{roomId}")
+    public ResponseEntity<Room> updateRoom(@PathVariable String roomId, @Valid @RequestBody Room room) {
+        Room updated = roomService.updateRoom(roomId, room);
+        return updated != null ? ResponseEntity.ok(updated) : ResponseEntity.notFound().build();
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable String id) {
-        service.delete(id);
-        return ResponseEntity.noContent().build();
+    @GetMapping
+    public ResponseEntity<List<Room>> getAllRooms() {
+        return ResponseEntity.ok(roomService.getAllActiveRooms());
     }
 
-    @GetMapping("/code")
-    public ResponseEntity<Room> findByCode(@RequestParam String code) {
-        return ResponseEntity.ok(service.findByRoomCode(code));
+    @GetMapping("/paged")
+    public ResponseEntity<Page<Room>> getRoomsPaged(@RequestParam int page, @RequestParam int size) {
+        return ResponseEntity.ok(roomService.getAllRoomsPaged(PageRequest.of(page, size)));
     }
 
-    @GetMapping("/name")
-    public ResponseEntity<List<Room>> findByName(@RequestParam String name) {
-        return ResponseEntity.ok(service.findByRoomNameExact(name));
+    @GetMapping("/{roomId}")
+    public ResponseEntity<Room> getRoomByRoomId(@PathVariable String roomId) {
+        Room room = roomService.getRoomByRoomId(roomId);
+        return room != null ? ResponseEntity.ok(room) : ResponseEntity.notFound().build();
     }
 
-    @GetMapping("/department")
-    public ResponseEntity<List<Room>> findByDepartment(@RequestParam String department) {
-        return ResponseEntity.ok(service.findByDepartment(department));
-    }
-
-    @GetMapping("/status")
-    public ResponseEntity<List<Room>> findByStatus(@RequestParam boolean active) {
-        return ResponseEntity.ok(service.findByStatus(active));
-    }
-
-    @GetMapping("/doctor")
-    public ResponseEntity<List<Room>> findByDoctor(@RequestParam String doctor) {
-        return ResponseEntity.ok(service.findByDoctor(doctor));
-    }
-
-    @GetMapping("/count")
-    public ResponseEntity<Long> countAll() {
-        return ResponseEntity.ok(service.countAll());
-    }
-
-    @GetMapping("/count-by-department")
-    public ResponseEntity<Long> countByDepartment(@RequestParam String department) {
-        return ResponseEntity.ok(service.countByDepartment(department));
+    @DeleteMapping("/{roomId}")
+    public ResponseEntity<Void> deleteRoom(@PathVariable String roomId) {
+        roomService.deleteRoom(roomId);
+        return ResponseEntity.ok().build();
     }
 }
-

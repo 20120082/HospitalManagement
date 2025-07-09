@@ -2,7 +2,11 @@ package com.example.demo.service;
 
 import com.example.demo.model.Room;
 import com.example.demo.repository.RoomRepository;
+import com.example.demo.util.RoomIdGenerator;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,53 +15,47 @@ import java.util.List;
 public class RoomService {
 
     @Autowired
-    private RoomRepository repo;
+    private RoomRepository roomRepository;
 
-    public List<Room> getAll() {
-        return repo.findByDeleteCheckFalse();
+    @Autowired
+    private RoomIdGenerator roomIdGenerator;
+
+    public Room createRoom(Room room) {
+        room.setRoomId(roomIdGenerator.generateRoomId());
+        room.setDeleteCheck(false);
+        return roomRepository.save(room);
     }
 
-    public Room add(Room room) {
-        return repo.save(room);
+    public Room updateRoom(String roomId, Room updatedRoom) {
+        Room existing = roomRepository.findByRoomIdAndDeleteCheckFalse(roomId).orElse(null);
+        if (existing != null) {
+            existing.setRoomName(updatedRoom.getRoomName());
+            existing.setDepartment(updatedRoom.getDepartment());
+            existing.setDoctorId(updatedRoom.getDoctorId());
+            existing.setDoctorName(updatedRoom.getDoctorName());
+            existing.setRoomActive(updatedRoom.isRoomActive());
+            return roomRepository.save(existing);
+        }
+        return null;
     }
 
-    public Room update(String id, Room room) {
-        room.setId(id);
-        return repo.save(room);
+    public List<Room> getAllActiveRooms() {
+        return roomRepository.findByDeleteCheckFalse();
     }
 
-    public void delete(String id) {
-        Room room = repo.findById(id).orElseThrow();
-        room.setDeleteCheck(true);
-        repo.save(room);
+    public Page<Room> getAllRoomsPaged(Pageable pageable) {
+        return roomRepository.findByDeleteCheckFalse(pageable);
     }
 
-    public Room findByRoomCode(String code) {
-        return repo.findByRoomCodeAndDeleteCheckFalse(code);
+    public Room getRoomByRoomId(String roomId) {
+        return roomRepository.findByRoomIdAndDeleteCheckFalse(roomId).orElse(null);
     }
 
-    public List<Room> findByRoomNameExact(String name) {
-        return repo.findByRoomNameRegexAndDeleteCheckFalse("^" + name + "$");
-    }
-
-    public List<Room> findByDepartment(String department) {
-        return repo.findByDepartmentAndDeleteCheckFalse(department);
-    }
-
-    public List<Room> findByStatus(boolean active) {
-        return repo.findByActiveAndDeleteCheckFalse(active);
-    }
-
-    public List<Room> findByDoctor(String doctor) {
-        return repo.findByDoctorInChargeAndDeleteCheckFalse(doctor);
-    }
-
-    public long countAll() {
-        return repo.countByDeleteCheckFalse();
-    }
-
-    public long countByDepartment(String department) {
-        return repo.countByDepartmentAndDeleteCheckFalse(department);
+    public void deleteRoom(String roomId) {
+        Room room = roomRepository.findByRoomIdAndDeleteCheckFalse(roomId).orElse(null);
+        if (room != null) {
+            room.setDeleteCheck(true);
+            roomRepository.save(room);
+        }
     }
 }
-

@@ -2,6 +2,9 @@ import requests
 import random
 from datetime import date, timedelta
 
+# Số lượng bệnh nhân muốn tạo (có thể chỉnh lên đến 10000)
+NUMBER_OF_ROOMS = 100
+
 API_URL = "http://localhost:8090/api/patients"
 
 first_names = ['Nguyễn', 'Trần', 'Lê', 'Phạm', 'Hoàng', 'Đặng', 'Bùi', 'Đỗ', 'Hồ', 'Ngô']
@@ -49,4 +52,4 @@ def create_patients(num_records):
             print(f"[{i}] Lỗi: {e}")
 
 # Gọi với số lượng mong muốn
-create_patients(200)
+create_patients(NUMBER_OF_ROOMS)

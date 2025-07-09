@@ -2,12 +2,13 @@ package com.example.demo.controller;
 
 import com.example.demo.model.MedicalRecord;
 import com.example.demo.service.MedicalRecordService;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
+import jakarta.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -15,50 +16,50 @@ import java.util.List;
 public class MedicalRecordController {
 
     @Autowired
-    private MedicalRecordService service;
-
-    @GetMapping
-    public ResponseEntity<List<MedicalRecord>> getAll() {
-        return ResponseEntity.ok(service.getAll());
-    }
+    private MedicalRecordService medicalRecordService;
 
     @PostMapping
-    public ResponseEntity<MedicalRecord> create(@RequestBody MedicalRecord record) {
-        return ResponseEntity.ok(service.create(record));
+    public ResponseEntity<MedicalRecord> createMedicalRecord(@Valid @RequestBody MedicalRecord record) {
+        return ResponseEntity.ok(medicalRecordService.createMedicalRecord(record));
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<MedicalRecord> update(@PathVariable String id, @RequestBody MedicalRecord record) {
-        return ResponseEntity.ok(service.update(id, record));
+    @PutMapping("/{recordId}")
+    public ResponseEntity<MedicalRecord> updateMedicalRecord(@PathVariable String recordId, @Valid @RequestBody MedicalRecord record) {
+        MedicalRecord updated = medicalRecordService.updateMedicalRecord(recordId, record);
+        return updated != null ? ResponseEntity.ok(updated) : ResponseEntity.notFound().build();
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable String id) {
-        service.delete(id);
-        return ResponseEntity.noContent().build();
+    @GetMapping
+    public ResponseEntity<List<MedicalRecord>> getAllRecords() {
+        return ResponseEntity.ok(medicalRecordService.getAllRecords());
     }
 
-    @GetMapping("/patient")
-    public ResponseEntity<List<MedicalRecord>> findByPatient(@RequestParam String patientId) {
-        return ResponseEntity.ok(service.findByPatient(patientId));
+    @GetMapping("/paged")
+    public ResponseEntity<Page<MedicalRecord>> getRecordsPaged(@RequestParam int page, @RequestParam int size) {
+        return ResponseEntity.ok(medicalRecordService.getRecordsPaged(page, size));
     }
 
-    @GetMapping("/room")
-    public ResponseEntity<List<MedicalRecord>> findByRoom(@RequestParam String roomId) {
-        return ResponseEntity.ok(service.findByRoom(roomId));
+    @GetMapping("/{recordId}")
+    public ResponseEntity<MedicalRecord> getRecordById(@PathVariable String recordId) {
+        MedicalRecord record = medicalRecordService.getRecordById(recordId);
+        return record != null ? ResponseEntity.ok(record) : ResponseEntity.notFound().build();
     }
 
-    @GetMapping("/doctor")
-    public ResponseEntity<List<MedicalRecord>> findByDoctor(@RequestParam String doctorId) {
-        return ResponseEntity.ok(service.findByDoctor(doctorId));
+    @DeleteMapping("/{recordId}")
+    public ResponseEntity<Void> deleteRecord(@PathVariable String recordId) {
+        boolean deleted = medicalRecordService.softDeleteRecord(recordId);
+        return deleted ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
+    }
+    
+    @GetMapping("/search")
+    public ResponseEntity<List<MedicalRecord>> searchRecords(
+            @RequestParam(required = false) String recordId,
+            @RequestParam(required = false) String patientId,
+            @RequestParam(required = false) String roomId,
+            @RequestParam(required = false) String doctorId,
+            @RequestParam(required = false) String doctorName,
+            @RequestParam(required = false) String createdAt) {
+        return ResponseEntity.ok(medicalRecordService.searchRecords(recordId, patientId, roomId, doctorId, doctorName, createdAt));
     }
 
-    @GetMapping("/date-range")
-    public ResponseEntity<List<MedicalRecord>> findByDateRange(
-            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime start,
-            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime end
-    ) {
-        return ResponseEntity.ok(service.findByVisitDateRange(start, end));
-    }
 }
-
