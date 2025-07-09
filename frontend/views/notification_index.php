@@ -15,7 +15,7 @@
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h2><i class="fas fa-bell"></i> Quản lý thông báo</h2>
                     <div>
-                        <a href="index.php" class="btn btn-secondary">
+                        <a href="index.php?controller=Auth&action=index" class="btn btn-secondary">
                             <i class="fas fa-home"></i> Trang chủ
                         </a>
                     </div>

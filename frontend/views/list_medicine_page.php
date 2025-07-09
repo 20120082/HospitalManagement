@@ -76,7 +76,7 @@
             </tbody>
         </table>
         </div>
-        <a href="index.php" class="btn btn-primary">Back</a>
+        <a href="index.php?controller=Auth&action=index" class="btn btn-primary">Back</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>

@@ -15,6 +15,6 @@
 <a href="index.php?controller=Doctor&action=DeletePage" class="btn btn-primary">Delete doctor</a>
 <a href="index.php?controller=Doctor&action=UpdatePage" class="btn btn-primary">Update doctor</a>
 <a href="index.php?controller=Doctor&action=ListPage" class="btn btn-primary">List doctor</a>
-<a href="index.php" class="btn btn-primary">Home</a>
+<a href="index.php?controller=Auth&action=index" class="btn btn-primary">Home</a>
 </body>
 </html>

@@ -11,10 +11,24 @@
     <h1>
     Hospital Management Homepage
 </h1>
-<a href="index.php?controller=Prescription&action=index" class="btn btn-primary">Prescription Service</a>
-<a href="index.php?controller=Doctor&action=index" class="btn btn-primary">Doctor Service</a>
-<a href="index.php?controller=Medicine&action=ListPage" class="btn btn-primary">Medicine Service</a>
-<a href="index.php?controller=Appointment&action=index" class="btn btn-primary">Appointment Service</a>
-<a href="index.php?controller=Notification&action=index" class="btn btn-success">Notification Management</a>
+
+<?php if (in_array($_SESSION['role'], ['admin', 'doctor'])): ?>
+        <a href="index.php?controller=Prescription&action=index" class="btn btn-primary">Prescription Service</a>
+<?php endif; ?>
+
+<?php if (in_array($_SESSION['role'], ['admin', 'staff'])): ?>
+        <a href="index.php?controller=Doctor&action=index" class="btn btn-primary">Doctor Service</a>
+<?php endif; ?>
+
+<?php if (in_array($_SESSION['role'], ['admin', 'staff', 'doctor'])): ?>
+        <a href="index.php?controller=Medicine&action=ListPage" class="btn btn-primary">Medicine Service</a>
+<?php endif; ?>
+
+<?php if (in_array($_SESSION['role'], ['admin', 'staff'])): ?>
+        <a href="index.php?controller=Appointment&action=index" class="btn btn-primary">Appointment Service</a>
+        <a href="index.php?controller=Notification&action=index" class="btn btn-success">Notification Management</a>
+        <a href="index.php?controller=Report&action=dashboard" class="btn btn-primary">Report Management</a>
+<?php endif; ?>
+<a href="index.php?controller=Auth&action=logout" class="btn btn-primary">Logout</a>
 </body>
 </html>

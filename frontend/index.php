@@ -1,6 +1,7 @@
 <?php
+session_start();
 $action = $_GET['action'] ?? 'index';
-$controllerName = isset($_GET['controller']) ? $_GET['controller'] : '';
+$controllerName = isset($_GET['controller']) ? $_GET['controller'] : 'Auth';
 switch ($controllerName) {
     case 'Prescription':
         require_once 'controllers/PrescriptionController.php';
@@ -23,6 +24,14 @@ switch ($controllerName) {
         require_once 'controllers/NotificationController.php';
         $controller = new NotificationController();
         break;
+    case 'Auth':
+        require_once 'controllers/AuthController.php';
+        $controller = new AuthController();
+        break; 
+    case 'Report':
+        require_once 'controllers/ReportController.php';
+        $controller = new ReportController();
+        break; 
     default:
         $controller = null;
 }
@@ -63,6 +72,18 @@ if(isset($_GET['controller']) && $controller) {
         case 'update':
             $controller->update();
             break;
+        case 'login':
+            $controller->login($_POST['username'], $_POST['password']);
+            break;
+        case 'logout':
+            $controller->logout();
+            break; 
+        case 'dashboard':
+            $controller->dashboard();
+            break;
+        case 'reportPage':
+            $controller->reportPage();
+            break;
         case 'sendAppointmentNotification':
             if (method_exists($controller, 'sendAppointmentNotification')) {
                 $controller->sendAppointmentNotification();
@@ -81,5 +102,5 @@ if(isset($_GET['controller']) && $controller) {
             }
     }
 } else {
-    require_once 'views/homepage.php';
+    require_once 'views/views_auth/login.php';
 }
