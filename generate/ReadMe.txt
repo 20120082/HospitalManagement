@@ -5,7 +5,7 @@ port cho api patient-service: 8090
 API_URL = "http://localhost:8090/api/patients"
 
 port cho api medical-records-service: 8091
-API_URL = "http://localhost:8091/api/medical-records""
+API_URL = "http://localhost:8091/api/medical-records"
 
 port cho api rooms-service: 8092
 API_URL = "http://localhost:8092/api/rooms"

@@ -23,8 +23,16 @@ def generate_date_of_birth():
     return (start_date + timedelta(days=random.randint(0, (end_date - start_date).days))).isoformat()
 
 def generate_phone_number():
-    prefix = random.choice(["091", "094", "096", "098", "090", "093", "089", "088"])
-    return prefix + str(random.randint(1000000, 9999999))
+    valid_prefixes = (
+        [f"032", "033", "034", "035", "036", "037", "038", "039"] +  # Viettel
+        ["056", "058", "059"] +                                     # Vietnamobile, Gmobile
+        [f"07{d}" for d in range(0, 10)] +                           # Mobifone
+        [f"08{d}" for d in range(1, 6)] +                            # Vinaphone
+        [f"09{d}" for d in range(0, 10)]                             # Mobifone, Vinaphone
+    )
+    prefix = random.choice(valid_prefixes)
+    suffix = str(random.randint(1000000, 9999999)).zfill(7)
+    return prefix + suffix
 
 def generate_email(full_name):
     slug = ''.join(c for c in full_name.lower() if c.isalnum())
