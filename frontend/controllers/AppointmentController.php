@@ -1,5 +1,5 @@
 <?php
-require_once 'models/Appointment.php';
+require_once __DIR__ . '/../models/Appointment.php';
 
 class AppointmentController {
     private $model;
@@ -91,7 +91,7 @@ class AppointmentController {
 
     // Gửi thông báo lịch khám qua Notification Service
     public function sendAppointmentNotification() {
-        require_once 'models/AppointmentNotificationModel.php';
+        require_once __DIR__ . '/../models/AppointmentNotificationModel.php';
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $to = $_POST['to'] ?? '';
             $patientName = $_POST['patientName'] ?? '';
