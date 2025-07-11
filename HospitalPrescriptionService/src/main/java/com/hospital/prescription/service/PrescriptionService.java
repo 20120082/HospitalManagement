@@ -296,4 +296,30 @@ public class PrescriptionService {
         dto.setDetails(detailDTOs);
         return dto;
     }
+
+    // --------------------- Thống kê ---------------------
+
+    public Long countAllPrescriptions() {
+        return prescriptionRepository.count();
+    }
+
+    public Long countPrescriptionsByMonth(int year, int month) {
+        return prescriptionRepository.countByCreatedDateBetween(
+            java.time.LocalDate.of(year, month, 1),
+            java.time.LocalDate.of(year, month, 1).withDayOfMonth(
+                java.time.LocalDate.of(year, month, 1).lengthOfMonth()
+            )
+        );
+    }
+
+    public Map<String, Long> countPrescriptionsByStatus() {
+        List<Prescription> prescriptions = prescriptionRepository.findAll();
+        Map<String, Long> statusCount = new HashMap<>();
+        
+        for (Prescription p : prescriptions) {
+            statusCount.put(p.getStatus(), statusCount.getOrDefault(p.getStatus(), 0L) + 1);
+        }
+        
+        return statusCount;
+    }
 }

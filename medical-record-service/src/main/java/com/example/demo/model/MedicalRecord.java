@@ -4,7 +4,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import jakarta.validation.constraints.NotBlank;
-
 import java.time.LocalDateTime;
 
 @Document(collection = "medical_records")
@@ -31,84 +30,25 @@ public class MedicalRecord {
 	private boolean deleteCheck = false;
 
 	// Getter & Setter
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getRecordId() {
-		return recordId;
-	}
-
-	public void setRecordId(String recordId) {
-		this.recordId = recordId;
-	}
-
-	public String getPatientId() {
-		return patientId;
-	}
-
-	public void setPatientId(String patientId) {
-		this.patientId = patientId;
-	}
-
-	public String getRoomId() {
-		return roomId;
-	}
-
-	public void setRoomId(String roomId) {
-		this.roomId = roomId;
-	}
-
-	public String getDoctorId() {
-		return doctorId;
-	}
-
-	public void setDoctorId(String doctorId) {
-		this.doctorId = doctorId;
-	}
-
-	public String getDoctorName() {
-		return doctorName;
-	}
-
-	public void setDoctorName(String doctorName) {
-		this.doctorName = doctorName;
-	}
-
-	public String getDiagnosis() {
-		return diagnosis;
-	}
-
-	public void setDiagnosis(String diagnosis) {
-		this.diagnosis = diagnosis;
-	}
-
-	public String getTreatment() {
-		return treatment;
-	}
-
-	public void setTreatment(String treatment) {
-		this.treatment = treatment;
-	}
-
-	public LocalDateTime getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(LocalDateTime createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	public boolean isDeleteCheck() {
-		return deleteCheck;
-	}
-
-	public void setDeleteCheck(boolean deleteCheck) {
-		this.deleteCheck = deleteCheck;
-	}
+	public String getId() { return id; }
+	public void setId(String id) { this.id = id; }
+	public String getRecordId() { return recordId; }
+	public void setRecordId(String recordId) { this.recordId = recordId; }
+	public String getPatientId() { return patientId; }
+	public void setPatientId(String patientId) { this.patientId = patientId; }
+	public String getRoomId() { return roomId; }
+	public void setRoomId(String roomId) { this.roomId = roomId; }
+	public String getDoctorId() { return doctorId; }
+	public void setDoctorId(String doctorId) { this.doctorId = doctorId; }
+	public String getDoctorName() { return doctorName; }
+	public void setDoctorName(String doctorName) { this.doctorName = doctorName; }
+	public String getDiagnosis() { return diagnosis; }
+	public void setDiagnosis(String diagnosis) { this.diagnosis = diagnosis; }
+	public String getTreatment() { return treatment; }
+	public void setTreatment(String treatment) { this.treatment = treatment; }
+	public LocalDateTime getCreatedAt() { return createdAt; }
+	public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+	public boolean isDeleteCheck() { return deleteCheck; }
+	public void setDeleteCheck(boolean deleteCheck) { this.deleteCheck = deleteCheck; }
 	// Lưu ý không thêm hàm logic tại đây
 }

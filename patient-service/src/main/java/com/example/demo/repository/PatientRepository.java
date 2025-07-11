@@ -23,5 +23,3 @@ public interface PatientRepository extends MongoRepository<Patient, String>, Pat
     
     boolean existsByPatientId(String patientId);
 }
-
-

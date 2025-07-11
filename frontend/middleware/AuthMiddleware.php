@@ -75,6 +75,12 @@ class AuthMiddleware {
                     $this->accessDenied();
                 }
                 break;
+                
+            case 'Report':
+                if(!in_array($role_name, ['admin', 'doctor', 'manager'])) {
+                    $this->accessDenied();
+                }
+                break;
         }
     }
     
