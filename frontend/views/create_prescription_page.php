@@ -12,8 +12,15 @@
         <h2>Create Prescription</h2>
         <form id="createPrescriptionForm" action="index.php?controller=Prescription&action=create" method="POST">
             <div class="mb-3">
-                <label for="idPatient" class="form-label">Patient ID</label>
-                <input type="number" class="form-control" id="idPatient" name="idPatient" required>
+                <label for="idPatient" class="form-label">Patient</label>
+                <select class="form-select" name="idPatient" required>
+                    <option value="">Select a patient</option>
+                        <?php
+                            foreach ($patients as $patient) {
+                                echo "<option value='{$patient['patientId']}'>{$patient['patientId']} - {$patient['fullName']}</option>";
+                                }
+                        ?>
+                    </select>
             </div>
             <div class="mb-3">
                 <label for="createdDate" class="form-label">Created Date</label>

@@ -1,5 +1,5 @@
 <?php
-require_once 'models/Prescription.php';
+require_once __DIR__ . '/../models/Prescription.php';
 
 class PrescriptionController {
     private $model;
@@ -14,21 +14,25 @@ class PrescriptionController {
 
     public function createPage()
     {
+        $patients= $this->model->getAllPatients();
         $medicines = $this->model->getAllMedicines();
         require_once 'views/create_prescription_page.php';
     }
     public function deletePage()
     {
+        $patients= $this->model->getAllPatients();
         $prescriptions = $this->model->getAllPrescriptions();
         require_once 'views/delete_prescription_page.php';
     }
     public function updatePage()
     {
+        $patients= $this->model->getAllPatients();
         $prescriptions = $this->model->getAllPrescriptions();
         require_once 'views/update_prescription_page.php';
     }
     public function listPage()
     {
+        $patients= $this->model->getAllPatients();
         $prescriptions = $this->model->getAllPrescriptions();
         require_once 'views/list_prescription_page.php';
     }
@@ -53,7 +57,7 @@ class PrescriptionController {
             }
 
             $data = [
-                'idPatient' => (int)$_POST['idPatient'],
+                'idPatient' => $_POST['idPatient'],
                 'createdDate' => $_POST['createdDate'],
                 'status' => $_POST['status'],
                 'details' => $details
@@ -113,6 +117,7 @@ class PrescriptionController {
                         }
                     }
                 }
+                $patients= $this->model->getAllPatients();
                 require_once 'views/view_prescriptiondetails.php';
             } else {
                 $result = ['success' => false, 'message' => 'Prescription not found'];

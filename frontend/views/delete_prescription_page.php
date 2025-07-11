@@ -15,7 +15,13 @@
                 <select class="form-select" id="deletePrescriptionId" name="prescriptionId" required>
                     <?php foreach ($prescriptions as $prescription): ?>
                         <option value="<?php echo $prescription['id']; ?>">
-                            ID: <?php echo $prescription['id']; ?> - Patient: <?php echo $prescription['idPatient']; ?> - Date: <?php echo $prescription['createdDate']; ?> - Status: <?php echo $prescription['status']; ?>
+                            ID: <?php echo $prescription['id']; ?> - Patient: 
+                            <?php foreach ($patients as $patient): ?>
+                                <?php if ($patient['patientId'] == $prescription['idPatient']): ?>
+                                <?php echo htmlspecialchars($patient['fullName']); ?> - <?php echo $prescription['idPatient']; ?>
+                                <?php break; ?>
+                                <?php endif; ?>
+                            <?php endforeach; ?> - Date: <?php echo $prescription['createdDate']; ?> - Status: <?php echo $prescription['status']; ?>
                         </option>
                     <?php endforeach; ?>
                 </select>

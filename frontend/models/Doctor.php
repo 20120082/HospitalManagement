@@ -1,5 +1,5 @@
 <?php
-session_start();
+// Model không cần session_start(), session sẽ được khởi động từ index.php
 
 class Doctor {
     private $apiBaseUrl = 'http://localhost:8081/api/doctors';
