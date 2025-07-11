@@ -50,6 +50,12 @@ switch ($controllerName) {
         require_once 'controllers/NotificationController.php';
         $controller = new NotificationController();
         break;
+    case 'Report':
+        // Kiểm tra quyền truy cập Report
+        $auth->checkControllerAccess('Report', $action);
+        require_once 'controllers/ReportController.php';
+        $controller = new ReportController();
+        break;
     default:
         $controller = null;
 }
@@ -135,6 +141,27 @@ if(isset($_GET['controller']) && $controller) {
             break;
         case 'toggleStatus':
             $controller->toggleStatus();
+            break;
+        // Report controller specific actions
+        case 'getPatientStats':
+            if (method_exists($controller, 'getPatientStats')) {
+                $controller->getPatientStats();
+            }
+            break;
+        case 'getPrescriptionStats':
+            if (method_exists($controller, 'getPrescriptionStats')) {
+                $controller->getPrescriptionStats();
+            }
+            break;
+        case 'getMonthlyReport':
+            if (method_exists($controller, 'getMonthlyReport')) {
+                $controller->getMonthlyReport();
+            }
+            break;
+        case 'test':
+            if (method_exists($controller, 'test')) {
+                $controller->test();
+            }
             break;
         default:
             if (method_exists($controller, 'index')) {

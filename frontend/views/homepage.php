@@ -99,6 +99,16 @@ if(!isset($_SESSION['user_id'])) {
                     </div>
                     <?php endif; ?>
                     
+                    <!-- Report and Statistics - Admin, Doctor, Manager -->
+                    <?php if(in_array($role, ['admin', 'doctor', 'manager'])): ?>
+                    <div class="col-md-3 mb-3">
+                        <a href="index.php?controller=Report&action=index" class="btn btn-warning w-100">
+                            <i class="fas fa-chart-bar"></i><br>
+                            Báo cáo & Thống kê
+                        </a>
+                    </div>
+                    <?php endif; ?>
+                    
                     <!-- My Dashboard - Tất cả role -->
                     <div class="col-md-3 mb-3">
                         <a href="index.php?controller=Auth&action=<?php echo $_SESSION['role_name']; ?>Dashboard" class="btn btn-info w-100">

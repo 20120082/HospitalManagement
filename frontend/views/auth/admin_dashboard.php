@@ -99,7 +99,7 @@ if(!isset($_SESSION['user_id'])) {
                                                 <i class="fas fa-chart-line fa-3x text-success mb-3"></i>
                                                 <h5>Báo cáo</h5>
                                                 <p>Xem các báo cáo thống kê</p>
-                                                <a href="#" class="btn btn-success">Xem báo cáo</a>
+                                                <a href="index.php?controller=Report&action=index" class="btn btn-success">Xem báo cáo</a>
                                             </div>
                                         </div>
                                     </div>

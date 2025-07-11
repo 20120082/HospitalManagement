@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/prescriptions")
@@ -60,5 +61,25 @@ public class PrescriptionController {
         } catch (RuntimeException e) {
             return new ResponseEntity<String>(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
+    }
+
+    // --------------------- Thống kê ---------------------
+
+    @GetMapping("/count")
+    public ResponseEntity<Long> countAllPrescriptions() {
+        Long count = prescriptionService.countAllPrescriptions();
+        return ResponseEntity.ok(count);
+    }
+
+    @GetMapping("/count-by-month")
+    public ResponseEntity<Long> countPrescriptionsByMonth(@RequestParam int year, @RequestParam int month) {
+        Long count = prescriptionService.countPrescriptionsByMonth(year, month);
+        return ResponseEntity.ok(count);
+    }
+
+    @GetMapping("/count-by-status")
+    public ResponseEntity<Map<String, Long>> countPrescriptionsByStatus() {
+        Map<String, Long> statusCount = prescriptionService.countPrescriptionsByStatus();
+        return ResponseEntity.ok(statusCount);
     }
 }
