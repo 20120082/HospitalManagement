@@ -17,6 +17,6 @@ public interface MedicalRecordRepository extends MongoRepository<MedicalRecord, 
 
     List<MedicalRecord> findByDeleteCheckFalse();
 
-	Page<MedicalRecord> findByDeleteCheckFalse(Pageable pageable);
+    Page<MedicalRecord> findByDeleteCheckFalse(Pageable pageable);
 
 }
