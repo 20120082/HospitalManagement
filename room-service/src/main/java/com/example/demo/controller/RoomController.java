@@ -8,6 +8,7 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,13 +33,13 @@ public class RoomController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Room>> getAllRooms() {
+    public ResponseEntity<List<Room>> getAllActiveRooms() {
         return ResponseEntity.ok(roomService.getAllActiveRooms());
     }
 
     @GetMapping("/paged")
-    public ResponseEntity<Page<Room>> getRoomsPaged(@RequestParam int page, @RequestParam int size) {
-        return ResponseEntity.ok(roomService.getAllRoomsPaged(PageRequest.of(page, size)));
+    public ResponseEntity<Page<Room>> getAllRoomsPaged(Pageable pageable) {
+        return ResponseEntity.ok(roomService.getAllRoomsPaged(pageable));
     }
 
     @GetMapping("/{roomId}")

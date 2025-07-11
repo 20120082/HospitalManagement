@@ -39,7 +39,7 @@
                     <option value="">Select a room</option>
                         <?php
                             foreach ($rooms as $room) {
-                                echo "<option value='{$room['roomCode']}'>{$room['roomName']}</option>";
+                                echo "<option value='{$room['roomId']}'>{$room['roomName']}</option>";
                                 }
                         ?>
                     </select>

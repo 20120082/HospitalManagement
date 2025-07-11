@@ -55,7 +55,7 @@
                                 <?php
                                     $roomName = '';
                                     foreach ($rooms as $room) {
-                                        if ($room['roomCode'] == $appointment['idRoom']) {
+                                        if ($room['roomId'] == $appointment['idRoom']) {
                                             $roomName = $room['roomName'];
                                             break;
                                         }

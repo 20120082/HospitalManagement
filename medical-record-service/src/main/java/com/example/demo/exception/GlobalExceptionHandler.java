@@ -24,3 +24,4 @@ public class GlobalExceptionHandler {
 
     // Các handler khác có thể bổ sung sau như: Exception.class, CustomException...
 }
+

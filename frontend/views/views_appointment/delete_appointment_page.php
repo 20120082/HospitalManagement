@@ -30,7 +30,7 @@
                                 <?php endif; ?>
                             <?php endforeach; ?>- Room:
                                 <?php foreach ($rooms as $room): ?>
-                                <?php if ($room['roomCode'] == $appointment['idRoom']): ?>
+                                <?php if ($room['roomId'] == $appointment['idRoom']): ?>
                                 <?php echo htmlspecialchars($room['roomName']); ?>
                                 <?php break; ?>
                                 <?php endif; ?>

@@ -38,19 +38,19 @@ public class PatientController {
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
     }
 
-    @GetMapping("/by-patient-id/{patientId}")
+    @GetMapping("{patientId}")
     public ResponseEntity<Patient> getPatientById(@PathVariable String patientId) {
         Patient patient = patientService.getPatientById(patientId);
         return patient != null ? ResponseEntity.ok(patient) : ResponseEntity.notFound().build();
     }
 
-    @PutMapping("/by-patient-id/{patientId}")
+    @PutMapping("{patientId}")
     public ResponseEntity<Patient> updatePatient(@PathVariable String patientId, @Valid @RequestBody Patient patient) {
         Patient updated = patientService.updatePatient(patientId, patient);
         return updated != null ? ResponseEntity.ok(updated) : ResponseEntity.notFound().build();
     }
 
-    @DeleteMapping("/by-patient-id/{patientId}")
+    @DeleteMapping("{patientId}")
     public ResponseEntity<Void> deletePatient(@PathVariable String patientId) {
         boolean deleted = patientService.softDeletePatient(patientId);
         return deleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();

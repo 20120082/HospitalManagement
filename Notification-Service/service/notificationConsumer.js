@@ -35,5 +35,3 @@ export async function startConsumer() {
     setTimeout(startConsumer, 5000); // Retry after 5 seconds
   }
 }
-
-startConsumer();
