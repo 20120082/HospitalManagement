@@ -9,7 +9,7 @@ $action = $_GET['action'] ?? 'index';
 $controllerName = $_GET['controller'] ?? '';
 
 // Danh sách controller dùng class
-$classControllers = ['Auth', 'Prescription', 'Medicine', 'Doctor', 'Appointment', 'User', 'Notification'];
+$classControllers = ['Auth', 'Prescription', 'Medicine', 'Doctor', 'Appointment', 'User', 'Notification', 'Report'];
 // Danh sách procedural (dùng include trực tiếp controller)
 $proceduralControllers = ['Patient', 'Room', 'MedicalRecord'];
 
@@ -114,6 +114,27 @@ if (in_array($controllerName, ['Patient', 'Room', 'MedicalRecord'])) {
             break;
         case 'toggleStatus':
             $controller->toggleStatus();
+            break;
+        // Report controller specific actions
+        case 'getPatientStats':
+            if (method_exists($controller, 'getPatientStats')) {
+                $controller->getPatientStats();
+            }
+            break;
+        case 'getPrescriptionStats':
+            if (method_exists($controller, 'getPrescriptionStats')) {
+                $controller->getPrescriptionStats();
+            }
+            break;
+        case 'getMonthlyReport':
+            if (method_exists($controller, 'getMonthlyReport')) {
+                $controller->getMonthlyReport();
+            }
+            break;
+        case 'test':
+            if (method_exists($controller, 'test')) {
+                $controller->test();
+            }
             break;
         default:
             if (method_exists($controller, 'index')) {

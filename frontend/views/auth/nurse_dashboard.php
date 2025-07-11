@@ -1,13 +1,12 @@
 <?php
 // Session đã được khởi động trong index.php
-if (!isset($_SESSION['user_id'])) {
+if(!isset($_SESSION['user_id'])) {
     header('Location: index.php?controller=Auth&action=loginPage');
     exit();
 }
 ?>
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +15,6 @@ if (!isset($_SESSION['user_id'])) {
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="views/css/styles.css">
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
         <div class="container-fluid">
@@ -103,5 +101,4 @@ if (!isset($_SESSION['user_id'])) {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
